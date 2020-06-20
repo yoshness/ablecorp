@@ -1,0 +1,28 @@
+.company {
+    margin-top: 60px;
+}
+
+.company__list {
+    dt {
+        font-weight: 700;
+
+        width: 15%;
+        padding: 30px 0;
+
+        letter-spacing: .08em;
+
+        &:not(:last-of-type) {
+            border-bottom: 1px solid #ebe8f6;
+        }
+    }
+    dd {
+        width: 85%;
+        padding: 30px 0;
+
+        letter-spacing: .08em;
+
+        &:not(:last-of-type) {
+            border-bottom: 1px solid #ebe8f6;
+        }
+    }
+}

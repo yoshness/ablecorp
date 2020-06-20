@@ -2,12 +2,12 @@ const { mix } = require('laravel-mix');
 
 const SRC_JS = 'src/js',
       SRC_CSS = 'src/sass',
-      // SRC_FONTS = 'src/fonts',
-      // SRC_IMAGES = 'src/images',
+      SRC_FONTS = 'src/fonts',
+      SRC_IMAGES = 'src/images',
       ASSETS_FOLDER = './wp-content/themes/able/assets';
 
 mix.sass(`${SRC_CSS}/style.scss`, ASSETS_FOLDER)
-   // .js(`${SRC_JS}/app.js`, ASSETS_FOLDER)
+   .js(`${SRC_JS}/app.js`, ASSETS_FOLDER)
    .options({
       processCssUrls: false
    })

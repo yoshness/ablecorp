@@ -1,0 +1,45 @@
+.service-block {
+    position: relative;
+    z-index: 1;
+}
+
+.service-block__image {
+    width: 38%;
+
+    img {
+        width: 100%;
+    }
+}
+
+.service-block__details {
+    width: 55%;
+}
+
+.service-block__details-top {
+    padding-left: 30px;
+
+    border-left: 1px solid $color-primary;
+
+    h3 {
+        font-size: 20px;
+
+        transition: color $duration $easing;
+        letter-spacing: .1em;
+
+        text-shadow: 1px 0;
+    }
+    em {
+        font-weight: 700;
+        font-style: normal;
+
+        display: block;
+
+        transform: skewX(-7deg);
+    }
+}
+
+.service-block__details-description {
+    line-height: 2;
+
+    margin-top: 25px;
+}

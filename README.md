@@ -35,4 +35,4 @@ All PHP variables are located in ```/wp-content/themes/able/inc/define.php```.
 
 + Email: ```josiah.dabuet@gmail.com```
 
-+ Skype: ```live:.cid.3faf9d5ff4c27a4a```# ablecorp
++ Skype: ```live:.cid.3faf9d5ff4c27a4a```

@@ -1,0 +1,43 @@
+.button {
+    position: relative;
+
+    display: inline-block;
+
+    padding: 13px 80px 13px 40px;
+
+    color: $color-primary;
+    border: 1px solid $color-primary;
+    border-radius: 25px;
+
+    &:before {
+        position: absolute;
+        top: 50%;
+        right: 30px;
+
+        display: block;
+
+        width: 35px;
+        height: 2px;
+
+        content: '';
+        transform: translateY(-50%);
+
+        background-color: #d0c9eb;
+    }
+    &:after {
+        position: absolute;
+        position: absolute;
+        top: 50%;
+        right: 50px;
+
+        display: block;
+
+        width: 15px;
+        height: 1px;
+
+        content: '';
+        transform: translateY(-50%);
+
+        background-color: $color-primary;
+    }
+}
