@@ -1,0 +1,38 @@
+//antialiased,subpixel-antialiased,none
+$font-smoothing: antialiased;
+
+//auto,optimizeSpeed,optimizeLegibility,geometricPrecision
+$text-rendering: auto;
+
+$base-font-family: 'Inter-Regular', sans-serif;
+$base-font-size: 16px;
+$base-font-color: #19243a;
+$base-background-color: #fff;
+
+$site-size: 1090px + 60;
+
+// colors
+$color-primary: #19243a; // dark blue
+
+// easing / animation
+$duration: .25s;
+$easing: ease-in-out;
+$delay: .35s;
+
+//breakpoints
+$breakpoint-mobile: 767px;
+
+//path
+$path-assets: "/wp-content/themes/mod2/assets";
+// $path-image: "#{$path-assets}/images";
+// $path-font: "#{$path-assets}/fonts";
+
+$font-inter-bold: 'Inter-Bold';
+
+// @font-face {
+//     font-family: 'Inter-Regular';
+//     src: url('#{$path-font}/Inter-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//     url('#{$path-font}/Inter-Regular.woff2') format('woff2'),  Super Modern Browsers 
+//     url('#{$path-font}/Inter-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+//     url('#{$path-font}/Inter-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+// }
