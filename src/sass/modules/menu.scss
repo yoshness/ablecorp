@@ -1,0 +1,147 @@
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 72%;
+    height: 100vh;
+    min-height: 760px;
+    margin-left: auto;
+
+    transition: opacity .5s $easing;
+
+    opacity: 0;
+    background-image: url(#{$path-image}/menu-bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+
+    // STATE
+    &.is-shown {
+        position: fixed;
+        z-index: 15;
+
+        opacity: 1;
+    }
+}
+.menu__nav {
+    list-style-type: none;
+}
+.menu__list {
+    padding: 100px 0 0 250px;
+
+    counter-reset: menu-items;
+}
+.menu__item {
+    position: relative;
+
+    display: block;
+
+    padding-bottom: 30px;
+
+    .section-title {
+        transform: scale(.8);
+    }
+
+    &:before {
+        font-family: $font-avenir;
+        font-size: 30px;
+        font-weight: 100;
+
+        position: absolute;
+        top: 35px;
+        left: -55px;
+
+        content: '0 ' counter(menu-items);
+        counter-increment: menu-items;
+        letter-spacing: -.1em;
+
+        color: #fff;
+    }
+}
+
+.menu__item-link {
+    position: relative;
+
+    display: inline-block;
+
+    transition: opacity $duration $easing;
+
+    &:hover {
+        opacity: .8;
+
+        &:before,
+        &:after {
+            opacity: 1;
+        }
+    }
+
+    &:before {
+        position: absolute;
+        top: 50%;
+        right: -80px;
+
+        display: block;
+
+        width: 55px;
+        height: 1px;
+
+        content: '';
+        transition: opacity $duration $easing;
+        transform: translateY(-50%);
+
+        opacity: 0;
+        background-color: #ac6baa;
+    }
+    &:after {
+        position: absolute;
+        top: 50%;
+        right: -50px;
+
+        display: block;
+
+        width: 25px;
+        height: 1px;
+
+        content: '';
+        transition: opacity $duration $easing;
+        transform: translateY(-50%);
+
+        opacity: 0;
+        background-color: #fff;
+    }
+}
+.menu__decor {
+    position: absolute;
+    bottom: 0;
+    left: -28%;
+
+    img {
+        position: absolute;
+        &:first-child {
+            bottom: -60px;
+            left: -180px;
+
+            width: 607px;
+            height: 550px;
+
+            animation: squish 6s ease-in-out infinite alternate;
+        }
+        &:nth-child(2) {
+            top: -330px;
+            left: -52px;
+
+            width: 139px;
+
+            animation: move-up 1s ease-in-out infinite alternate;
+        }
+        &:last-child {
+            top: -250px;
+            left: 130px;
+
+            width: 92px;
+
+            animation: move-up 1.5s ease-in-out infinite alternate;
+        }
+    }
+}

@@ -16,3 +16,10 @@ body {
     min-width: $site-size;
   }
 }
+
+html, body {
+  // STATE WHEN MENU IS OPEN
+  &.is-locked {
+    overflow: hidden;
+  }
+}

@@ -1,3 +1,10 @@
+.l-index {
+    // STATE
+    &.is-hidden {
+        opacity: 0;
+    }
+}
+
 .l-index__about {
     position: relative;
 
@@ -55,12 +62,12 @@
 .l-index__services-decor {
     position: absolute;
     top: -70px;
-    right: -300px;
+    right: -230px;
 
     img {
-        width: 620px;
+        width: 520px;
 
-        transform: rotate(210deg);
+        animation: squish 6s ease-in-out infinite alternate;
     }
 }
 
@@ -281,7 +288,7 @@
 }
 
 .l-index__company {
-    padding-bottom: 100px;
+    padding-bottom: 40px;
 }
 
 .l-index__company-decor {
@@ -295,19 +302,23 @@
 
             width: 480px;
 
-            transform: rotate(135deg) scaleX(-1);
+            animation: squish 6s ease-in-out infinite alternate;
         }
         &:nth-child(2) {
             top: 10px;
             right: 280px;
 
             width: 125px;
+
+            animation: move-up 1s ease-in-out infinite alternate;
         }
         &:last-child {
             top: 130px;
             right: 150px;
 
             width: 82px;
+
+            animation: move-up 1.5s ease-in-out infinite alternate;
         }
     }
 }

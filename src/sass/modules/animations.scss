@@ -1,0 +1,16 @@
+@keyframes squish {
+  	10%, 40%, 80% { transform: scale(1, .9); }
+  	0%, 30%, 60%, 100% {transform: scale(.9, 1);}
+}
+@keyframes squish-alt {
+  	10%, 40%, 80% { transform: scale(.9, 1); }
+  	0%, 30%, 60%, 100% {transform: scale(1, .9);}
+}
+@keyframes move-up {
+	from {
+		transform: translateY(0);
+	}
+	from {
+		transform: translateY(-20px);
+	}
+}

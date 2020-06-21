@@ -2,26 +2,64 @@
     position: relative;
 
     padding: 130px 0 0;
+
+    transition: opacity $duration $easing;
+
+    opacity: 0;
+
+    // STATE
+    &.is-shown {
+        opacity: 1;
+    }
 }
 
 .hero__eyecatch {
     width: 600px;
     margin: 0 auto;
 
+    transition: opacity 1.5s $easing;
+
+    opacity: 0;
+
     img {
         display: block;
 
         margin: 0 auto;
 
+        transition: all 1.5s $easing;
+
         &:first-of-type {
             width: 597px;
+
+            transform: translateX(-250px);
         }
         &:nth-of-type(2) {
             width: 64px;
+
+            transform: rotate(0deg);
         }
         &:last-of-type {
             width: 558px;
             margin-top: 35px;
+
+            transform: translateX(250px);
+        }
+    }
+
+    // STATE
+    &.is-shown {
+        opacity: 1;
+
+        img {
+            &:first-of-type {
+                transform: translateX(0);
+            }
+            &:nth-of-type(2) {
+                transform: rotate(-720deg);
+            }
+            &:last-of-type {
+                transform: translateX(0);
+            }
         }
     }
 }
@@ -33,8 +71,16 @@
 
     margin: 50px auto 25px;
 
+    transition: opacity 1.25s $easing .25s;
     text-align: center;
     letter-spacing: .1em;
+
+    opacity: 0;
+
+    // STATE
+    &.is-shown {
+        opacity: 1;
+    }
 }
 
 .hero__cta {
@@ -52,10 +98,13 @@
     height: 100px;
     margin: 0 auto;
 
-    transition: all $duration $easing;
+    transition: opacity 1.25s $easing .25s,
+    background-color .25s $easing,
+    color .25s $easing;
     text-align: center;
     letter-spacing: .1em;
 
+    opacity: 0;
     color: $color-primary;
     border: 1px solid $color-primary;
     border-radius: 100%;
@@ -65,9 +114,14 @@
         color: #fff;
         background-color: $color-primary;
     }
+
+    // STATE
+    &.is-shown {
+        opacity: 1;
+    }
 }
 
-.hero__decors {
+.hero__decor {
     position: absolute;
     bottom: -100px;
     left: 0;
@@ -85,6 +139,8 @@
 
     width: 657px;
     height: 600px;
+
+    animation: squish 6s ease-in-out infinite alternate;
 }
 
 .hero__glob-right {
@@ -94,34 +150,58 @@
 
     width: 621px;
     height: 578px;
+
+    animation: squish-alt 4s ease-in-out infinite alternate;
 }
 
-
+.hero__people {
+    // STATE
+    &.is-shown {
+        img {
+            opacity: 1;
+        }
+    }
+}
 
 .hero__person {
     position: absolute;
+
+    opacity: 0;
+
     &:first-child {
         top: 120px;
         left: 150px;
 
         width: 139px;
+
+        transition: opacity .75s $easing;
+        animation: move-up 1s ease-in-out infinite alternate;
     }
     &:nth-child(2) {
         top: 260px;
         left: 330px;
 
         width: 87px;
+
+        transition: opacity .75s $easing .5s;
+        animation: move-up 1.5s ease-in-out infinite alternate;
     }
     &:nth-child(3) {
         top: 250px;
         right: 330px;
 
         width: 92px;
+
+        transition: opacity .75s $easing .5s;
+        animation: move-up 1s ease-in-out infinite alternate;
     }
     &:last-child {
         top: 130px;
         right: 160px;
 
         width: 111px;
+
+        transition: opacity .75s $easing;
+        animation: move-up 1.5s ease-in-out infinite alternate;
     }
 }

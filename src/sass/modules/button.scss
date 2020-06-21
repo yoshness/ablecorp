@@ -40,4 +40,17 @@
 
         background-color: $color-primary;
     }
+
+    // MODIFIER
+    &.button--white {
+        color: #fff;
+        border-color: #fff;
+
+        &:before {
+            background-color: #ac6baa;
+        }
+        &:after {
+            background-color: #fff;
+        }
+    }
 }

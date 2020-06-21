@@ -4,4 +4,12 @@
 			<img src="<?php echo IMAGE_URL;?>logo.svg" alt="">
 		</a>
 	</div>
+	<div class="header__right">
+		<div class="header__hamburger" id="js-toggle-menu">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
 </header>

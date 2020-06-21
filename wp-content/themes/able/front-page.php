@@ -17,19 +17,19 @@
 get_header();
 ?>
 
-<main class="l-index">
-	<div class="hero">
-		<h1 class="hero__eyecatch">
+<main class="l-index" id="js-main-wrapper">
+	<div class="hero" id="js-hero">
+		<h1 class="hero__eyecatch" id="js-hero-eyecatch">
 			<img src="<?php echo IMAGE_URL;?>index/curiosity.svg" alt="">
 			<img src="<?php echo IMAGE_URL;?>index/x-symbol.svg" alt="">
 			<img src="<?php echo IMAGE_URL;?>index/synergy.svg" alt="">
 		</h1>
-		<p class="hero__tagline">When do you start web marketing?</p>
-		<a class="hero__cta" href="#">NOW</a>
-		<div class="hero__decors">
+		<p class="hero__tagline" id="js-hero-tagline">When do you start web marketing?</p>
+		<a class="hero__cta" href="#"  id="js-hero-cta">NOW</a>
+		<div class="hero__decor">
 			<img class="hero__glob-left" src="<?php echo IMAGE_URL;?>index/hero-glob-left.svg" alt="">
 			<img class="hero__glob-right" src="<?php echo IMAGE_URL;?>index/hero-glob-right.svg" alt="">
-			<div class="hero__people">
+			<div class="hero__people" id="js-hero-people">
 				<img class="hero__person" src="<?php echo IMAGE_URL;?>index/person-blue-1.svg" alt="">
 				<img class="hero__person" src="<?php echo IMAGE_URL;?>index/person-red-1.svg" alt="">
 				<img class="hero__person" src="<?php echo IMAGE_URL;?>index/person-red-2.svg" alt="">
@@ -41,7 +41,7 @@ get_header();
 	<section class="l-index__about">
 		<div class="l-container">
 			<div class="l-index__about-content">
-					<h2 class="section-title section-title--white section-title--centered">
+				<h2 class="section-title section-title--white section-title--centered" id="js-about-section">
 					<span class="section-title__en">about us</span>
 					<span class="section-title__ja">私たちについて</span>
 				</h2>
@@ -54,7 +54,7 @@ get_header();
 			<img src="<?php echo IMAGE_URL;?>index/service-glob-right.svg" alt="">
 		</div>
 		<div class="l-container">
-			<div class="l-index__services-content">
+			<div class="l-index__services-content" id="js-services-section">
 				<h2 class="section-title">
 					<span class="section-title__en">services</span>
 					<span class="section-title__ja">事業内容</span>
@@ -120,7 +120,7 @@ get_header();
 			</div>
 		</div>
 	</section>
-	<section class="l-index__works">
+	<section class="l-index__works" id="js-works-section">
 		<div class="l-index__works-content">
 			<h2 class="section-title section-title--white">
 				<span class="section-title__en">works</span>
@@ -183,7 +183,7 @@ get_header();
 			<a class="l-index__works-button button" href="#">実績一覧へ</a>
 		</div>
 	</section>
-	<section class="l-index__column">
+	<section class="l-index__column" id="js-column-section">
 		<div class="l-container">
 			<div class="l-index__column-content">
 				<h2 class="section-title">
