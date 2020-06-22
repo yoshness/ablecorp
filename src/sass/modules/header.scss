@@ -1,13 +1,17 @@
 .header {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     top: 45px;
     left: 50px;
 
     transition: opacity $duration $easing;
 
-    opacity: 0;
+    // MODIFIER
+    &.header--front {
+        opacity: 0;
+    }
 
+    // STATES
     &.is-shown {
         opacity: 1;
     }

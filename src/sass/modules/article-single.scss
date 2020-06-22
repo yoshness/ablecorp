@@ -1,0 +1,117 @@
+.article-single {
+    p {
+        font-size: 16px;
+        line-height: 2;
+        margin-bottom: 50px;
+
+        a {
+
+        }
+    }
+    h2 {
+        font-size: 26px;
+        background-color: #e8e9f8;
+        display: inline-block;
+        text-shadow: 1px 0;
+        padding: 5px 15px;
+        margin-bottom: 55px;
+    }
+    h3 {
+        font-size: 24px;
+        display: inline-block;
+        text-shadow: 1px 0;
+        padding-bottom: 4px;
+        border-bottom: 2px solid $color-primary;
+        margin-bottom: 55px;
+    }
+    h4 {
+        font-size: 20px;
+        text-shadow: 1px 0;
+        padding-left: 25px;
+        position: relative;
+        margin-bottom: 55px;
+
+        &:before {
+            content: '';
+            width: 2px;
+            height: 105%;
+            position: absolute;
+            top: -2px;
+            left: 0;
+            background-color: $color-primary;
+        }
+    }
+    ul, ol {
+        margin-bottom: 55px;
+        li {
+            margin-left: 18px;
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+    }
+    ul {
+        list-style-type: none;
+
+        li {
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: -18px;
+                top: 50%;
+                background-color: $color-primary;
+                border-radius: 100%;
+                width: 8px;
+                height: 8px;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    img {
+        height: 400px;
+        width: 716px;
+        object-fit: cover;
+    }
+
+    iframe {
+        width: 716px;
+        height: 365px;
+    }
+
+    // Wordpress Core
+    .aligncenter {
+        display: block;
+
+        margin: 5px auto 55px auto;
+        text-align: center;
+    }
+    .alignright {
+        float: right;
+
+        margin: 5px 0 20px 20px;
+    }
+    .alignleft {
+        float: left;
+
+        width: 326px;
+        margin: 5px 35px 20px 0;
+
+        @include max-screen($breakpoint-mobile) {
+            float: none;
+
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+    .wp-caption {
+        max-width: 96%;
+        padding: 5px 3px 10px;
+
+        text-align: center;
+
+        border: 1px solid #f0f0f0;
+        background: #fff;
+    }
+}

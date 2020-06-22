@@ -126,61 +126,88 @@ get_header();
 				<span class="section-title__en">works</span>
 				<span class="section-title__ja">実績</span>
 			</h2>
+			<?php
+	          	$works_args = array(
+					'post_type'      => 'work',
+			    	'posts_per_page' => 5,
+			    	'order'          => 'DESC',
+			    	'post_status'    => 'publish',
+			    	'paged'=> get_query_var('paged')
+				);
+				$works = new WP_Query($works_args);
+	        ?>
 			<ul class="l-index__works-list" id="js-works-slider">
+				<?php 
+					while ($works->have_posts()): $works->the_post(); 
+						$categories = get_the_terms( get_the_ID(), 'work_category' );
+				?>
 				<li class="l-index__works-item">
-					<article class="article-block article-block--works">
-						<div class="article-block__image">
-							<img src="<?php echo IMAGE_URL;?>index/works-dummy.jpg" alt="">
-						</div>
-						<div class="article-block__details">
-							<time class="article-block__date" datetime="2019-03-22">2019.03.22</time>
-							<span class="article-block__category">動画制作</span>
-							<h3 class="article-block__title">理念系、目指す世界系のことも書きましょう詳細のメンバーの説明は現状できないので1</h3>
-						</div>
-					</article>
+					<a href="<?php echo the_permalink(); ?>">
+						<article class="article-block article-block--works">
+							<div class="article-block__image" style="background-image: url(<?php echo get_eyecatch_data( get_the_ID()); ?>);"></div>
+							<div class="article-block__details">
+								<time class="article-block__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
+								<span class="article-block__category"><?php echo $categories[0]->name; ?></span>
+									<h3 class="article-block__title"><?php echo get_the_title(); ?></h3>
+							</div>
+						</article>
+					</a>
 				</li>
 				<li class="l-index__works-item">
-					<article class="article-block article-block--works">
-						<div class="article-block__image">
-							<img src="<?php echo IMAGE_URL;?>index/works-dummy.jpg" alt="">
-						</div>
-						<div class="article-block__details">
-							<time class="article-block__date" datetime="2019-03-22">2019.03.22</time>
-							<span class="article-block__category">動画制作</span>
-							<h3 class="article-block__title">理念系、目指す世界系のことも書きましょう詳細のメンバーの説明は現状できないので2</h3>
-						</div>
-					</article>
+					<a href="<?php echo the_permalink(); ?>">
+						<article class="article-block article-block--works">
+							<div class="article-block__image" style="background-image: url(<?php echo get_eyecatch_data( get_the_ID()); ?>);"></div>
+							<div class="article-block__details">
+								<time class="article-block__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
+								<span class="article-block__category"><?php echo $categories[0]->name; ?></span>
+									<h3 class="article-block__title"><?php echo get_the_title(); ?></h3>
+							</div>
+						</article>
+					</a>
 				</li>
 				<li class="l-index__works-item">
-					<article class="article-block article-block--works">
-						<div class="article-block__image">
-							<img src="<?php echo IMAGE_URL;?>index/works-dummy.jpg" alt="">
-						</div>
-						<div class="article-block__details">
-							<time class="article-block__date" datetime="2019-03-22">2019.03.22</time>
-							<span class="article-block__category">動画制作</span>
-							<h3 class="article-block__title">理念系、目指す世界系のことも書きましょう詳細のメンバーの説明は現状できないので3</h3>
-						</div>
-					</article>
+					<a href="<?php echo the_permalink(); ?>">
+						<article class="article-block article-block--works">
+							<div class="article-block__image" style="background-image: url(<?php echo get_eyecatch_data( get_the_ID()); ?>);"></div>
+							<div class="article-block__details">
+								<time class="article-block__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
+								<span class="article-block__category"><?php echo $categories[0]->name; ?></span>
+									<h3 class="article-block__title"><?php echo get_the_title(); ?></h3>
+							</div>
+						</article>
+					</a>
 				</li>
 				<li class="l-index__works-item">
-					<article class="article-block article-block--works">
-						<div class="article-block__image">
-							<img src="<?php echo IMAGE_URL;?>index/works-dummy.jpg" alt="">
-						</div>
-						<div class="article-block__details">
-							<time class="article-block__date" datetime="2019-03-22">2019.03.22</time>
-							<span class="article-block__category">動画制作</span>
-							<h3 class="article-block__title">理念系、目指す世界系のことも書きましょう詳細のメンバーの説明は現状できないので4</h3>
-						</div>
-					</article>
+					<a href="<?php echo the_permalink(); ?>">
+						<article class="article-block article-block--works">
+							<div class="article-block__image" style="background-image: url(<?php echo get_eyecatch_data( get_the_ID()); ?>);"></div>
+							<div class="article-block__details">
+								<time class="article-block__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
+								<span class="article-block__category"><?php echo $categories[0]->name; ?></span>
+									<h3 class="article-block__title"><?php echo get_the_title(); ?></h3>
+							</div>
+						</article>
+					</a>
 				</li>
+				<li class="l-index__works-item">
+					<a href="<?php echo the_permalink(); ?>">
+						<article class="article-block article-block--works">
+							<div class="article-block__image" style="background-image: url(<?php echo get_eyecatch_data( get_the_ID()); ?>);"></div>
+							<div class="article-block__details">
+								<time class="article-block__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
+								<span class="article-block__category"><?php echo $categories[0]->name; ?></span>
+									<h3 class="article-block__title"><?php echo get_the_title(); ?></h3>
+							</div>
+						</article>
+					</a>
+				</li>
+				<?php endwhile; wp_reset_postdata(); ?>
 			</ul>
 			<div class="l-index__works-arrows u-flex">
 				<div class="l-index__works-arrow l-index__works-arrow--prev js-slider-prev"></div>
 				<div class="l-index__works-arrow l-index__works-arrow--next js-slider-next"></div>
 			</div>
-			<a class="l-index__works-button button" href="#">実績一覧へ</a>
+			<a class="l-index__works-button button" href="<?php echo HOME_URL; ?>works">実績一覧へ</a>
 		</div>
 	</section>
 	<section class="l-index__column" id="js-column-section">
@@ -190,46 +217,39 @@ get_header();
 					<span class="section-title__en">column </span>
 					<span class="section-title__ja">コラム</span>
 				</h2>
+				<?php
+		          	$columns_args = array(
+						'post_type'      => 'column',
+				    	'posts_per_page' => 5,
+				    	'order'          => 'DESC',
+				    	'post_status'    => 'publish',
+				    	'paged'=> get_query_var('paged')
+					);
+					$columns = new WP_Query($columns_args);
+		        ?>
 				<ul class="l-index__column-list u-flex">
+					<?php 
+						while ($columns->have_posts()): $columns->the_post(); 
+
+						// Making an excerpt of the news post content
+					    $title_excerpt = get_excerpt(get_the_title(), 100);
+					?>
 					<li class="l-index__column-item">
-						<article class="article-block">
-							<div class="article-block__image">
-								<img src="<?php echo IMAGE_URL;?>index/service-1.jpg" alt="">
-							</div>
-							<div class="article-block__details">
-								<time class="article-block__date" datetime="2019-03-22">2019.03.22</time>
-								<span class="article-block__category">NEWS</span>
-								<h3 class="article-block__title">理念系、目指す世界系のことも書き詳細のメンバーの説明は現状できな</h3>
-							</div>
-						</article>
+						<a href="<?php echo the_permalink(); ?>">
+							<article class="article-block">
+								<div class="article-block__image" style="background-image: url(<?php echo get_eyecatch_data( get_the_ID()); ?>);"></div>
+								<div class="article-block__details">
+									<time class="article-block__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
+									<span class="article-block__category"><?php echo $categories[0]->name; ?></span>
+										<h3 class="article-block__title"><?php echo $title_excerpt; ?></h3>
+								</div>
+							</article>
+						</a>
 					</li>
-					<li class="l-index__column-item">
-						<article class="article-block">
-							<div class="article-block__image">
-								<img src="<?php echo IMAGE_URL;?>index/service-1.jpg" alt="">
-							</div>
-							<div class="article-block__details">
-								<time class="article-block__date" datetime="2019-03-22">2019.03.22</time>
-								<span class="article-block__category">NEWS</span>
-								<h3 class="article-block__title">理念系、目指す世界系のことも書き詳細のメンバーの説明は現状できな</h3>
-							</div>
-						</article>
-					</li>
-					<li class="l-index__column-item">
-						<article class="article-block">
-							<div class="article-block__image">
-								<img src="<?php echo IMAGE_URL;?>index/service-1.jpg" alt="">
-							</div>
-							<div class="article-block__details">
-								<time class="article-block__date" datetime="2019-03-22">2019.03.22</time>
-								<span class="article-block__category">NEWS</span>
-								<h3 class="article-block__title">理念系、目指す世界系のことも書き詳細のメンバーの説明は現状できな</h3>
-							</div>
-						</article>
-					</li>
+					<?php endwhile; wp_reset_postdata(); ?>
 				</ul>
 			</div>
-			<a class="l-index__column-button button" href="#">コラム一覧へ</a>
+			<a class="l-index__column-button button" href="<?php echo HOME_URL; ?>columns">コラム一覧へ</a>
 		</div>
 	</section>
 	<section class="l-index__company">
