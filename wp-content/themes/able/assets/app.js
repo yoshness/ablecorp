@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 10);
+/******/ 	return __webpack_require__(__webpack_require__.s = 11);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10955,11 +10955,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_init_sliders__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_hero_animation__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modules_toggle_menu__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modules_scroll_to_element__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modules_toggle_menu__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modules_scroll_to_element__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modules_scroll_activate__ = __webpack_require__(6);
 
 window.jQuery = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
 window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
+
 
 
 
@@ -10970,6 +10972,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__modules_init_sliders__["a" /*
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__modules_hero_animation__["a" /* default */])();
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__modules_toggle_menu__["a" /* default */])();
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__modules_scroll_to_element__["a" /* default */])();
+__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__modules_scroll_activate__["a" /* default */])();
 
 /***/ }),
 /* 2 */,
@@ -11008,7 +11011,7 @@ function heroAnimation() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_slick_carousel__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_slick_carousel__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_slick_carousel___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_slick_carousel__);
 /* harmony export (immutable) */ __webpack_exports__["a"] = initSliders;
 
@@ -11027,6 +11030,41 @@ function initSliders() {
 
 /***/ }),
 /* 6 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = scrollActivate;
+function scrollActivate() {
+    var BREAKPOINT_MOBILE = 768;
+
+    // fade-in-up on scroll
+    $(window).on('load, scroll', function () {
+        $('.js-scroll-activate').each(function (i, e) {
+            var target = e,
+                offset = 0;
+
+            if ($(window).width() > BREAKPOINT_MOBILE) {
+                if ($(target).data('offset') != undefined) {
+                    offset = $(target).data('offset');
+                } else {
+                    offset = 150;
+                }
+            } else {
+                offset = 150;
+            }
+
+            var top_of_object = $(target).offset().top + offset;
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            if (bottom_of_window > top_of_object) {
+                $(target).addClass('is-active');
+            }
+        });
+    });
+}
+
+/***/ }),
+/* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11053,7 +11091,7 @@ function scrollToElement() {
 }
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11077,7 +11115,7 @@ function toggleMenu() {
 }
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -14097,8 +14135,8 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 9 */,
-/* 10 */
+/* 10 */,
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(1);

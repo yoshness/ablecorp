@@ -1,8 +1,20 @@
 .article-block {
-
     &:hover {
         .article-block__image {
             opacity: .8;
+        }
+    }
+
+    &.is-active {
+        transform: translateY(0);
+
+        opacity: 1;
+
+        .article-block__image,
+        .article-block__details {
+            transform: translateY(0);
+
+            opacity: 1;
         }
     }
 
@@ -45,11 +57,16 @@
     }
 }
 .article-block__image {
-    background-size: cover;
+    height: 201px;
+
+    transition: opacity $duration $easing;
+    transition: all $duration-long $easing .5s;
+    transform: translateY(50px);
+
+    opacity: 0;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 201px;
-    transition: opacity $duration $easing;
+    background-size: cover;
 
     img {
         width: 100%;
@@ -59,6 +76,11 @@
     position: relative;
 
     padding: 20px 0 20px 20px;
+
+    transition: all $duration-long $easing 1s;
+    transform: translateY(50px);
+
+    opacity: 0;
 
     &:before {
         position: absolute;
@@ -106,6 +128,6 @@
 
     letter-spacing: .06em;
 
-    text-shadow: 1px 0;
     color: $base-font-color;
+    text-shadow: 1px 0;
 }

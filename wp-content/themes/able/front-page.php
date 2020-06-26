@@ -40,7 +40,7 @@ get_header();
 	</div>
 	<section class="l-index__about">
 		<div class="l-container">
-			<div class="l-index__about-content">
+			<div class="l-index__about-content js-scroll-activate" data-offset="900">
 				<h2 class="section-title section-title--white section-title--centered" id="js-about-section">
 					<span class="section-title__en">about us</span>
 					<span class="section-title__ja">私たちについて</span>
@@ -54,16 +54,16 @@ get_header();
 			<img src="<?php echo IMAGE_URL;?>index/service-glob-right.svg" alt="">
 		</div>
 		<div class="l-container">
-			<div class="l-index__services-content" id="js-services-section">
+			<div class="l-index__services-content js-scroll-activate" id="js-services-section">
 				<h2 class="section-title">
 					<span class="section-title__en">services</span>
 					<span class="section-title__ja">事業内容</span>
 				</h2>
 				<ul class="l-index__services-list">
 					<li class="l-index__services-item">
-						<article class="service-block u-flex">
-							<div class="service-block__image">
-								<img src="<?php echo IMAGE_URL;?>index/service-1.jpg" alt="">
+						<article class="service-block u-flex js-scroll-activate">
+							<div class="service-block__left">
+								<div class="service-block__image" style="background-image: url(<?php echo IMAGE_URL;?>index/service-1.jpg);"></div>
 							</div>
 							<div class="service-block__details">
 								<div class="service-block__details-top">
@@ -75,9 +75,9 @@ get_header();
 						</article>
 					</li>
 					<li class="l-index__services-item">
-						<article class="service-block u-flex">
-							<div class="service-block__image">
-								<img src="<?php echo IMAGE_URL;?>index/service-2.jpg" alt="">
+						<article class="service-block u-flex js-scroll-activate">
+							<div class="service-block__left">
+								<div class="service-block__image" style="background-image: url(<?php echo IMAGE_URL;?>index/service-2.jpg);"></div>
 							</div>
 							<div class="service-block__details">
 								<div class="service-block__details-top">
@@ -89,9 +89,9 @@ get_header();
 						</article>
 					</li>
 					<li class="l-index__services-item">
-						<article class="service-block u-flex">
-							<div class="service-block__image">
-								<img src="<?php echo IMAGE_URL;?>index/service-3.jpg" alt="">
+						<article class="service-block u-flex js-scroll-activate">
+							<div class="service-block__left">
+								<div class="service-block__image" style="background-image: url(<?php echo IMAGE_URL;?>index/service-3.jpg);"></div>
 							</div>
 							<div class="service-block__details">
 								<div class="service-block__details-top">
@@ -103,9 +103,9 @@ get_header();
 						</article>
 					</li>
 					<li class="l-index__services-item">
-						<article class="service-block u-flex">
-							<div class="service-block__image">
-								<img src="<?php echo IMAGE_URL;?>index/service-4.jpg" alt="">
+						<article class="service-block u-flex js-scroll-activate">
+							<div class="service-block__left">
+								<div class="service-block__image" style="background-image: url(<?php echo IMAGE_URL;?>index/service-4.jpg);"></div>
 							</div>
 							<div class="service-block__details">
 								<div class="service-block__details-top">
@@ -121,7 +121,7 @@ get_header();
 		</div>
 	</section>
 	<section class="l-index__works" id="js-works-section">
-		<div class="l-index__works-content">
+		<div class="l-index__works-content js-scroll-activate">
 			<h2 class="section-title section-title--white">
 				<span class="section-title__en">works</span>
 				<span class="section-title__ja">実績</span>
@@ -210,7 +210,7 @@ get_header();
 			<a class="l-index__works-button button" href="<?php echo HOME_URL; ?>works">実績一覧へ</a>
 		</div>
 	</section>
-	<section class="l-index__column" id="js-column-section">
+	<section class="l-index__column js-scroll-activate" id="js-column-section">
 		<div class="l-container">
 			<div class="l-index__column-content">
 				<h2 class="section-title">
@@ -236,7 +236,7 @@ get_header();
 					?>
 					<li class="l-index__column-item">
 						<a href="<?php echo the_permalink(); ?>">
-							<article class="article-block">
+							<article class="article-block js-scroll-activate">
 								<div class="article-block__image" style="background-image: url(<?php echo get_eyecatch_data( get_the_ID()); ?>);"></div>
 								<div class="article-block__details">
 									<time class="article-block__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
@@ -252,7 +252,7 @@ get_header();
 			<a class="l-index__column-button button" href="<?php echo HOME_URL; ?>columns">コラム一覧へ</a>
 		</div>
 	</section>
-	<section class="l-index__company">
+	<section class="l-index__company js-scroll-activate">
 		<div class="l-index__company-decor">
 			<img src="<?php echo IMAGE_URL;?>index/company-glob.svg" alt="">
 			<img src="<?php echo IMAGE_URL;?>index/person-blue-1.svg" alt="">

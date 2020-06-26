@@ -31,6 +31,17 @@
     width: 884px;
     margin: 0 auto;
     padding-top: 520px;
+
+    transition: all $duration-long $easing;
+    transform: translateY(50px);
+
+    opacity: 0;
+
+    &.is-active {
+        transform: translateY(0);
+
+        opacity: 1;
+    }
 }
 
 .l-index__services {
@@ -74,6 +85,17 @@
 .l-index__services-content {
     width: 884px;
     margin: 0 auto;
+
+    transition: all $duration-long $easing;
+    transform: translateY(50px);
+
+    opacity: 0;
+
+    &.is-active {
+        transform: translateY(0);
+
+        opacity: 1;
+    }
 }
 
 .l-index__services-list {
@@ -172,6 +194,26 @@
 
     margin-left: 50px;
 
+    transition: all $duration-long $easing;
+    transform: translateY(50px);
+
+    opacity: 0;
+
+    &.is-active {
+        transform: translateY(0);
+
+        opacity: 1;
+
+        .article-block__image,
+        .article-block__details,
+        .l-index__works-arrows,
+        .l-index__works-button {
+            transform: translateY(0);
+
+            opacity: 1;
+        }
+    }
+
     .section-title {
         margin-bottom: 50px;
         margin-left: 230px;
@@ -192,6 +234,11 @@
     position: absolute;
     top: 65px;
     right: 300px;
+
+    transition: all $duration-long $easing 1.5s;
+    transform: translateY(50px);
+
+    opacity: 0;
 }
 .l-index__works-arrow {
     position: relative;
@@ -241,12 +288,34 @@
     position: absolute;
     right: 180px;
     bottom: -120px;
+
+    transition: all $duration-long $easing 1.5s;
+    transform: translateY(50px);
+
+    opacity: 0;
 }
 
 .l-index__column {
     position: relative;
 
     margin-bottom: 250px;
+
+    transition: all $duration-long $easing;
+    transform: translateY(50px);
+
+    opacity: 0;
+
+    &.is-active {
+        transform: translateY(0);
+
+        opacity: 1;
+
+        .l-index__column-button {
+            transform: translateY(0);
+
+            opacity: 1;
+        }
+    }
 
     &:after {
         position: absolute;
@@ -285,14 +354,42 @@
     z-index: 1;
     right: 30px;
     bottom: -100px;
+
+    transition: all $duration-long $easing 1.5s;
+    transform: translateY(50px);
+
+    opacity: 0;
 }
 
 .l-index__company {
     padding-bottom: 40px;
+
+    transition: all $duration-long $easing;
+    transform: translateY(50px);
+
+    opacity: 0;
+
+    &.is-active {
+        transform: translateY(0);
+
+        opacity: 1;
+
+        .company,
+        .l-index__company-decor {
+            transform: translateY(0);
+
+            opacity: 1;
+        }
+    }
 }
 
 .l-index__company-decor {
     position: relative;
+
+    transition: all $duration-long $easing 1s;
+    transform: translateY(50px);
+
+    opacity: 0;
 
     img {
         position: absolute;
