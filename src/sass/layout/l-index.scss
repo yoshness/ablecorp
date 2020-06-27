@@ -16,6 +16,13 @@
     background-position: center center;
     background-size: cover;
 
+    @include max-screen($breakpoint-mobile) {
+        height: 880px;
+        margin-top: 0;
+
+        background-image: url(#{$path-image}/index/about-bg-sp.png);
+    }
+
     p {
         line-height: 2;
 
@@ -37,6 +44,11 @@
 
     opacity: 0;
 
+    @include max-screen($breakpoint-mobile) {
+        width: 100%;
+        padding-top: 275px;
+    }
+
     &.is-active {
         transform: translateY(0);
 
@@ -51,6 +63,10 @@
 
     margin-top: -150px;
     padding-top: 200px;
+
+    @include max-screen($breakpoint-mobile) {
+        padding-top: 240px;
+    }
 
     &:before {
         font-family: $font-avenir;
@@ -67,6 +83,14 @@
 
         color: #f9f9fd;
         text-shadow: 3px 0 #f9f9fd;
+
+        @include max-screen($breakpoint-mobile) {
+            font-size: 150px;
+
+            top: 460px;
+            bottom: auto;
+            left: -250px;
+        }
     }
 }
 
@@ -75,10 +99,19 @@
     top: -70px;
     right: -230px;
 
+    @include max-screen($breakpoint-mobile) {
+        top: 70px;
+        right: -100px;
+    }
+
     img {
         width: 520px;
 
         animation: squish 6s ease-in-out infinite alternate;
+
+        @include max-screen($breakpoint-mobile) {
+            width: 350px;
+        }
     }
 }
 
@@ -90,6 +123,10 @@
     transform: translateY(50px);
 
     opacity: 0;
+
+    @include max-screen($breakpoint-mobile) {
+        width: 100%;
+    }
 
     &.is-active {
         transform: translateY(0);
@@ -129,6 +166,13 @@
 
         color: #fff;
         text-shadow: -3px 0 #f5f5fc, 0 3px #f5f5fc, 3px 0 #f5f5fc, 0 -3px #f5f5fc;
+
+        @include max-screen($breakpoint-mobile) {
+            font-size: 140px;
+
+            top: 160px;
+            right: 0;
+        }
     }
 
     &:hover {
@@ -158,6 +202,14 @@
     background-position: center center;
     background-size: cover;
 
+    @include max-screen($breakpoint-mobile) {
+        height: 440px;
+        margin-bottom: 350px;
+        padding: 0;
+
+        background-image: url(#{$path-image}/index/works-bg-sp.png);
+    }
+
     &:before {
         font-family: $font-avenir;
         font-size: 330px;
@@ -173,6 +225,10 @@
         opacity: .05;
         color: #fff;
         text-shadow: 3px 0 #fff;
+
+        @include max-screen($breakpoint-mobile) {
+            display: none;
+        }
     }
     &:after {
         position: absolute;
@@ -185,6 +241,13 @@
         content: '';
 
         background-color: #f5f5fc;
+
+        @include max-screen($breakpoint-mobile) {
+            bottom: -275px;
+
+            width: 100%;
+            height: 275px;
+        }
     }
 }
 
@@ -198,6 +261,11 @@
     transform: translateY(50px);
 
     opacity: 0;
+
+    @include max-screen($breakpoint-mobile) {
+        margin-left: 0;
+        padding: 50px 30px 0;
+    }
 
     &.is-active {
         transform: translateY(0);
@@ -217,17 +285,29 @@
     .section-title {
         margin-bottom: 50px;
         margin-left: 230px;
+
+        @include max-screen($breakpoint-mobile) {
+            margin-left: 0;
+        }
     }
 }
 
 .l-index__works-list {
     .slick-track {
         margin-left: -281px;
+
+        @include max-screen($breakpoint-mobile) {
+            margin-left: 0;
+        }
     }
 }
 
 .l-index__works-item {
     padding-right: 50px;
+
+    @include max-screen($breakpoint-mobile) {
+        padding-right: 0;
+    }
 }
 
 .l-index__works-arrows {
@@ -239,6 +319,13 @@
     transform: translateY(50px);
 
     opacity: 0;
+
+    @include max-screen($breakpoint-mobile) {
+        top: 100px;
+        right: 30px;
+
+        width: 105px;
+    }
 }
 .l-index__works-arrow {
     position: relative;
@@ -252,6 +339,11 @@
     opacity: .6;
     border: 1px solid #fff;
     border-radius: 100%;
+
+    @include max-screen($breakpoint-mobile) {
+        width: 45px;
+        height: 45px;
+    }
 
     &:before {
         position: absolute;
@@ -268,6 +360,11 @@
 
         border-top: 2px solid #fff;
         border-left: 2px solid #fff;
+
+        @include max-screen($breakpoint-mobile) {
+            width: 8px;
+            height: 8px;
+        }
     }
 
     &:hover {
@@ -277,6 +374,10 @@
     // MODIFIER
     &.l-index__works-arrow--next {
         margin-left: 20px;
+
+        @include max-screen($breakpoint-mobile) {
+            margin-left: 0;
+        }
 
         &:before {
             transform: translate(-50%, -50%) rotate(135deg);
@@ -293,6 +394,17 @@
     transform: translateY(50px);
 
     opacity: 0;
+
+    @include max-screen($breakpoint-mobile) {
+        position: absolute;
+        right: 50%;
+        bottom: -100px;
+
+        width: 210px;
+
+        transform: translateX(50%) !important;
+        text-align: center;
+    }
 }
 
 .l-index__column {
@@ -328,6 +440,10 @@
         content: '';
 
         background-color: #f5f5fc;
+
+        @include max-screen($breakpoint-mobile) {
+            width: 100%;
+        }
     }
 }
 
@@ -338,15 +454,27 @@
     .section-title {
         margin-bottom: 50px;
         margin-left: 115px;
+
+        @include max-screen($breakpoint-mobile) {
+            margin-left: 0;
+        }
     }
 }
 
 .l-index__column-list {
     list-style-type: none;
+
+    @include max-screen($breakpoint-mobile) {
+        display: block;
+    }
 }
 
 .l-index__column-item {
     width: 30%;
+
+    @include max-screen($breakpoint-mobile) {
+        width: 100%;
+    }
 }
 
 .l-index__column-button {
@@ -359,6 +487,14 @@
     transform: translateY(50px);
 
     opacity: 0;
+
+    @include max-screen($breakpoint-mobile) {
+        right: 50%;
+
+        width: 210px;
+
+        transform: translateX(50%) !important;
+    }
 }
 
 .l-index__company {
@@ -400,6 +536,13 @@
             width: 480px;
 
             animation: squish 6s ease-in-out infinite alternate;
+
+            @include max-screen($breakpoint-mobile) {
+                top: 250px;
+                left: -180px;
+
+                width: 320px;
+            }
         }
         &:nth-child(2) {
             top: 10px;
@@ -408,6 +551,13 @@
             width: 125px;
 
             animation: move-up 1s ease-in-out infinite alternate;
+
+            @include max-screen($breakpoint-mobile) {
+                top: 50px;
+                right: 55px;
+
+                width: 65px;
+            }
         }
         &:last-child {
             top: 130px;
@@ -416,6 +566,13 @@
             width: 82px;
 
             animation: move-up 1.5s ease-in-out infinite alternate;
+
+            @include max-screen($breakpoint-mobile) {
+                top: 105px;
+                right: 10px;
+
+                width: 35px;
+            }
         }
     }
 }
@@ -423,4 +580,8 @@
 .l-index__company-content {
     width: 884px;
     margin: 0 auto;
+
+    @include max-screen($breakpoint-mobile) {
+        width: 100%;
+    }
 }

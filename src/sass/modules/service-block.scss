@@ -7,6 +7,10 @@
 
     opacity: 0;
 
+    @include max-screen($breakpoint-mobile) {
+        display: block;
+    }
+
     &.is-active {
         transform: translateY(0);
 
@@ -24,6 +28,10 @@
 
 .service-block__left {
     width: 38%;
+
+    @include max-screen($breakpoint-mobile) {
+        width: 100%;
+    }
 }
 
 .service-block__image {
@@ -37,10 +45,18 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+
+    @include max-screen($breakpoint-mobile) {
+        height: 189px;
+    }
 }
 
 .service-block__details {
     width: 55%;
+
+    @include max-screen($breakpoint-mobile) {
+        width: 100%;
+    }
 }
 
 .service-block__details-top {
@@ -51,6 +67,11 @@
 
     opacity: 0;
     border-left: 1px solid $color-primary;
+
+    @include max-screen($breakpoint-mobile) {
+        margin-top: 25px;
+        padding-left: 25px;
+    }
 
     h3 {
         font-size: 20px;

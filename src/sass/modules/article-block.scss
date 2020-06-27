@@ -22,6 +22,10 @@
     &.article-block--works {
         .article-block__image {
             height: 309px;
+
+            @include max-screen($breakpoint-mobile) {
+                height: 185px;
+            }
         }
         .article-block__details {
             position: relative;
@@ -34,6 +38,12 @@
 
             background-color: #fff;
 
+            @include max-screen($breakpoint-mobile) {
+                margin-top: -25px;
+                margin-left: 0;
+                padding: 25px;
+            }
+
             &:before {
                 display: none;
             }
@@ -41,11 +51,19 @@
         .article-block__date {
             font-size: 14px;
             font-weight: normal;
+
+            @include max-screen($breakpoint-mobile) {
+                font-size: 12px;
+            }
         }
         .article-block__category {
             font-size: 14px;
 
             padding: 7px 15px;
+
+            @include max-screen($breakpoint-mobile) {
+                font-size: 12px;
+            }
         }
         .article-block__title {
             font-size: 17px;
@@ -53,6 +71,12 @@
             margin-top: 25px;
 
             letter-spacing: .05em;
+
+            @include max-screen($breakpoint-mobile) {
+                font-size: 16px;
+
+                margin-top: 15px;
+            }
         }
     }
 }
@@ -106,6 +130,10 @@
     transform: skewX(-7deg);
 
     color: $color-primary;
+
+    @include max-screen($breakpoint-mobile) {
+        font-size: 12px;
+    }
 }
 .article-block__category {
     font-size: 12px;

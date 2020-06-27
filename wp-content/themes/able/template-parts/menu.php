@@ -1,4 +1,9 @@
 <div class="menu" id="js-menu">
+	<div class="menu__left">
+		<a href="<?php echo HOME_URL; ?>">
+			<img src="<?php echo IMAGE_URL;?>logo.svg" alt="">
+		</a>
+	</div>
 	<nav class="menu__nav">
 		<ul class="menu__list">
 			<li class="menu__item">

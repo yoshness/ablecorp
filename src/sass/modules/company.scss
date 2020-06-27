@@ -3,6 +3,10 @@
 }
 
 .company__list {
+    @include max-screen($breakpoint-mobile) {
+        align-items: unset;
+    }
+
     dt {
         font-weight: 700;
 
@@ -11,8 +15,19 @@
 
         letter-spacing: .08em;
 
+        @include max-screen($breakpoint-mobile) {
+            width: 35%;
+            padding: 40px 0;
+        }
+
         &:not(:last-of-type) {
             border-bottom: 1px solid #ebe8f6;
+        }
+
+        &:nth-of-type(2) {
+            @include max-screen($breakpoint-mobile) {
+                height: 115px;
+            }
         }
     }
     dd {
@@ -21,8 +36,19 @@
 
         letter-spacing: .08em;
 
+        @include max-screen($breakpoint-mobile) {
+            width: 65%;
+            padding: 40px 0;
+        }
+
         &:not(:last-of-type) {
             border-bottom: 1px solid #ebe8f6;
+        }
+
+        &:nth-of-type(2) {
+            @include max-screen($breakpoint-mobile) {
+                height: 115px;
+            }
         }
     }
 }

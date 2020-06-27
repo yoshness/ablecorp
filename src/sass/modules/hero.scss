@@ -21,6 +21,10 @@
 
     opacity: 0;
 
+    @include max-screen($breakpoint-mobile) {
+        width: 100%;
+    }
+
     img {
         display: block;
 
@@ -32,17 +36,31 @@
             width: 597px;
 
             transform: translateX(-250px);
+
+            @include max-screen($breakpoint-mobile) {
+                width: 315px;
+                margin-bottom: 5px;
+            }
         }
         &:nth-of-type(2) {
             width: 64px;
 
             transform: rotate(0deg);
+
+            @include max-screen($breakpoint-mobile) {
+                width: 49px;
+            }
         }
         &:last-of-type {
             width: 558px;
             margin-top: 35px;
 
             transform: translateX(250px);
+
+            @include max-screen($breakpoint-mobile) {
+                width: 293px;
+                margin-top: 25px;
+            }
         }
     }
 
@@ -76,6 +94,12 @@
     letter-spacing: .1em;
 
     opacity: 0;
+
+    @include max-screen($breakpoint-mobile) {
+        font-size: 16px;
+
+        margin-top: 35px;
+    }
 
     // STATE
     &.is-shown {
@@ -141,6 +165,13 @@
     height: 600px;
 
     animation: squish 6s ease-in-out infinite alternate;
+
+    @include max-screen($breakpoint-mobile) {
+        bottom: -250px;
+        left: -100px;
+
+        width: 250px;
+    }
 }
 
 .hero__glob-right {
@@ -152,6 +183,13 @@
     height: 578px;
 
     animation: squish-alt 4s ease-in-out infinite alternate;
+
+    @include max-screen($breakpoint-mobile) {
+        right: -100px;
+        bottom: -250px;
+
+        width: 250px;
+    }
 }
 
 .hero__people {
@@ -176,6 +214,14 @@
 
         transition: opacity .75s $easing;
         animation: move-up 1s ease-in-out infinite alternate;
+
+        @include max-screen($breakpoint-mobile) {
+            top: auto;
+            bottom: 80px;
+            left: 0;
+
+            width: 79px;
+        }
     }
     &:nth-child(2) {
         top: 260px;
@@ -185,6 +231,14 @@
 
         transition: opacity .75s $easing .5s;
         animation: move-up 1.5s ease-in-out infinite alternate;
+
+        @include max-screen($breakpoint-mobile) {
+            top: auto;
+            bottom: 35px;
+            left: 70px;
+
+            width: 45px;
+        }
     }
     &:nth-child(3) {
         top: 250px;
@@ -194,6 +248,14 @@
 
         transition: opacity .75s $easing .5s;
         animation: move-up 1s ease-in-out infinite alternate;
+
+        @include max-screen($breakpoint-mobile) {
+            top: auto;
+            right: 70px;
+            bottom: 20px;
+
+            width: 47px;
+        }
     }
     &:last-child {
         top: 130px;
@@ -203,5 +265,13 @@
 
         transition: opacity .75s $easing;
         animation: move-up 1.5s ease-in-out infinite alternate;
+
+        @include max-screen($breakpoint-mobile) {
+            top: auto;
+            right: 25px;
+            bottom: 80px;
+
+            width: 59px;
+        }
     }
 }
