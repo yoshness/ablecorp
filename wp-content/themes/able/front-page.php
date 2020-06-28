@@ -45,7 +45,7 @@ get_header();
 					<span class="section-title__en">about us</span>
 					<span class="section-title__ja">私たちについて</span>
 				</h2>
-				<p>かっこいいものを書いてみましょう。アイデアと目指す世界について書いてみましょう。現時点ではメンバーの詳細を説明することはできませんので、どのようなメンバーが運営しているかを含めておくとよいでしょう。かっこいいものを書いてみましょう。アイデアと目指す世界について書いてみましょう。現時点ではメンバーの詳細を説明することはできませんので、どのようなメンバーが運営しているかを含めておくとよいでしょう。</p>
+				<p>「最高なパフォーマンスとはなにか？」<br>様々な課題が生まれて、解決する。新たなニーズが生まれ、アイディアが生まれ満たされる。<br class="u-show-pc">時間が立つと共に様々なサービスが誕生し、多くの先人企業が社会貢献をしてきました。<br class="u-show-pc">このような現代において個人のみならず社会においてもニーズの多様化は常に加速しています。<br class="u-show-pc">多様化する需要に、Webマーケティングを通して様々なアイディアと実績を見せながら応えていきたい。<br class="u-show-pc">「curiosity（好奇心）」×「synagy（相乗効果）」をテーマに、<br class="u-show-pc">大胆かつ柔軟に。適正なチームとコストで。新時代に求められる新しいスタイルを作っていくことが私達のミッションです。</p>
 			</div>
 		</div>
 	</section>
@@ -70,7 +70,7 @@ get_header();
 									<h3>Web制作</h3>
 									<em>Web Production</em>
 								</div>
-								<p class="service-block__details-description">高い文章力とSEOの知識を併せもったライターが、貴社ご用件に合わせて高品質なコンテンツを納品します。</p>
+								<p class="service-block__details-description">とにかくハイコストパフォーマンスであること。それが私たちの強みです。<br class="u-show-pc">お客様に本当に必要で、かつ後悔しないWebサイト制作をコンテンツ企画からデザイン、納品までご一緒します。</p>
 							</div>
 						</article>
 					</li>
@@ -81,24 +81,10 @@ get_header();
 							</div>
 							<div class="service-block__details">
 								<div class="service-block__details-top">
-									<h3>SEOコンサル</h3>
-									<em>SEO Consultation</em>
+									<h3>SEO対策</h3>
+									<em>Search Engine Optimization</em>
 								</div>
-								<p class="service-block__details-description">大手メディアなどで、SEO記事の執筆経験があるライターや、Webサイトの構築提案経験豊富なディレクターが貴社のSEO対策の現状を診断し、検索エンジン最適化を図ります。</p>
-							</div>
-						</article>
-					</li>
-					<li class="l-index__services-item">
-						<article class="service-block u-flex js-scroll-activate">
-							<div class="service-block__left">
-								<div class="service-block__image" style="background-image: url(<?php echo IMAGE_URL;?>index/service-3.jpg);"></div>
-							</div>
-							<div class="service-block__details">
-								<div class="service-block__details-top">
-									<h3>広告運用</h3>
-									<em>Ad Operation</em>
-								</div>
-								<p class="service-block__details-description">大規模なサイトは得意ではありませんが、ユーザー行動に基づいた情報設計、コンテンツ企画で、効果の出やすいページを制作します。</p>
+								<p class="service-block__details-description">ユーザー視点での高品質なコンテンツを以って、SEO対策を実施すること。それが私たちの強みです。<br class="u-show-pc">検索エンジンから評価されやすいWebサイト、高い文章力とSEOの知識を併せもったライターが貴社SEO課題を解決します。</p>
 							</div>
 						</article>
 					</li>
@@ -112,7 +98,21 @@ get_header();
 									<h3>動画制作</h3>
 									<em>Video Production</em>
 								</div>
-								<p class="service-block__details-description">大規模なサイトは得意ではありませんが、ユーザー行動に基づいた情報設計、コンテンツ企画で、効果の出やすいページを制作します。</p>
+								<p class="service-block__details-description">Webマーケティングの視点から動画作成をできることが私たちの強みです。<br class="u-show-pc">5G時代において動画の活用は重要なマーケティング手段の１つです。<br class="u-show-pc">様々な媒体に合せて企画〜撮影、編集、納品までノンストップでご一緒します。</p>
+							</div>
+						</article>
+					</li>
+					<li class="l-index__services-item">
+						<article class="service-block u-flex js-scroll-activate">
+							<div class="service-block__left">
+								<div class="service-block__image" style="background-image: url(<?php echo IMAGE_URL;?>index/service-3.jpg);"></div>
+							</div>
+							<div class="service-block__details">
+								<div class="service-block__details-top">
+									<h3>広告運用</h3>
+									<em>Advertising strategy</em>
+								</div>
+								<p class="service-block__details-description">お客様の思いをふさわしい媒体を選択して広告できること。それが私たちの強みです。<br class="u-show-pc">Yahoo!やGoogle、Facebook、Twitterなど様々な媒体での広告運用、経験と数値に基づいた分析が可能です。</p>
 							</div>
 						</article>
 					</li>
@@ -141,54 +141,6 @@ get_header();
 					while ($works->have_posts()): $works->the_post(); 
 						$categories = get_the_terms( get_the_ID(), 'work_category' );
 				?>
-				<li class="l-index__works-item">
-					<a href="<?php echo the_permalink(); ?>">
-						<article class="article-block article-block--works">
-							<div class="article-block__image" style="background-image: url(<?php echo get_eyecatch_data( get_the_ID()); ?>);"></div>
-							<div class="article-block__details">
-								<time class="article-block__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
-								<span class="article-block__category"><?php echo $categories[0]->name; ?></span>
-									<h3 class="article-block__title"><?php echo get_the_title(); ?></h3>
-							</div>
-						</article>
-					</a>
-				</li>
-				<li class="l-index__works-item">
-					<a href="<?php echo the_permalink(); ?>">
-						<article class="article-block article-block--works">
-							<div class="article-block__image" style="background-image: url(<?php echo get_eyecatch_data( get_the_ID()); ?>);"></div>
-							<div class="article-block__details">
-								<time class="article-block__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
-								<span class="article-block__category"><?php echo $categories[0]->name; ?></span>
-									<h3 class="article-block__title"><?php echo get_the_title(); ?></h3>
-							</div>
-						</article>
-					</a>
-				</li>
-				<li class="l-index__works-item">
-					<a href="<?php echo the_permalink(); ?>">
-						<article class="article-block article-block--works">
-							<div class="article-block__image" style="background-image: url(<?php echo get_eyecatch_data( get_the_ID()); ?>);"></div>
-							<div class="article-block__details">
-								<time class="article-block__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
-								<span class="article-block__category"><?php echo $categories[0]->name; ?></span>
-									<h3 class="article-block__title"><?php echo get_the_title(); ?></h3>
-							</div>
-						</article>
-					</a>
-				</li>
-				<li class="l-index__works-item">
-					<a href="<?php echo the_permalink(); ?>">
-						<article class="article-block article-block--works">
-							<div class="article-block__image" style="background-image: url(<?php echo get_eyecatch_data( get_the_ID()); ?>);"></div>
-							<div class="article-block__details">
-								<time class="article-block__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
-								<span class="article-block__category"><?php echo $categories[0]->name; ?></span>
-									<h3 class="article-block__title"><?php echo get_the_title(); ?></h3>
-							</div>
-						</article>
-					</a>
-				</li>
 				<li class="l-index__works-item">
 					<a href="<?php echo the_permalink(); ?>">
 						<article class="article-block article-block--works">
@@ -233,11 +185,13 @@ get_header();
 
 						// Making an excerpt of the news post content
 					    $title_excerpt = get_excerpt(get_the_title(), 100);
+
+					    $featured_image = get_eyecatch_data(get_the_ID()) ? get_eyecatch_data(get_the_ID()) : IMAGE_URL.'ogp.jpg';
 					?>
 					<li class="l-index__column-item">
 						<a href="<?php echo the_permalink(); ?>">
 							<article class="article-block js-scroll-activate">
-								<div class="article-block__image" style="background-image: url(<?php echo get_eyecatch_data( get_the_ID()); ?>);"></div>
+								<div class="article-block__image" style="background-image: url(<?php echo $featured_image; ?>);"></div>
 								<div class="article-block__details">
 									<time class="article-block__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
 									<span class="article-block__category"><?php echo $categories[0]->name; ?></span>

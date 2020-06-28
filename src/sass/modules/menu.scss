@@ -32,8 +32,8 @@
 }
 .menu__left {
     position: absolute;
-    top: 43px;
-    left: -34%;
+    top: 45px;
+    left: -34.15%;
 
     @include max-screen($breakpoint-mobile) {
         top: 18px;
@@ -42,6 +42,10 @@
         transform: scale(.85);
 
         filter: saturate(0) invert(1) brightness(1.2);
+    }
+
+    img {
+        width: 220px;
     }
 }
 .menu__nav {

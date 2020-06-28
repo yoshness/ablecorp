@@ -37,7 +37,7 @@
 .l-index__about-content {
     width: 884px;
     margin: 0 auto;
-    padding-top: 520px;
+    padding-top: 470px;
 
     transition: all $duration-long $easing;
     transform: translateY(50px);
@@ -474,6 +474,21 @@
 
     @include max-screen($breakpoint-mobile) {
         width: 100%;
+    }
+
+    .article-block__image {
+        transition: opacity $duration $easing;
+        transition: all $duration-long $easing .5s;
+        transform: translateY(50px);
+
+        opacity: 0;
+    }
+
+    .article-block__details {
+        transition: all $duration-long $easing 1s;
+        transform: translateY(50px);
+
+        opacity: 0;
     }
 }
 

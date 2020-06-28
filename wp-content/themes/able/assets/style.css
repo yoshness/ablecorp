@@ -588,8 +588,8 @@ textarea {
 
 .menu__left {
   position: absolute;
-  top: 43px;
-  left: -34%;
+  top: 45px;
+  left: -34.15%;
 }
 
 @media screen and (max-width: 767px) {
@@ -599,6 +599,10 @@ textarea {
     transform: scale(0.85);
     filter: saturate(0) invert(1) brightness(1.2);
   }
+}
+
+.menu__left img {
+  width: 220px;
 }
 
 .menu__nav {
@@ -1134,10 +1138,6 @@ textarea {
   opacity: 0;
 }
 
-.article-block:hover .article-block__image {
-  opacity: .8;
-}
-
 .article-block.is-active {
   transform: translateY(0);
   opacity: 1;
@@ -1163,6 +1163,7 @@ textarea {
   position: relative;
   z-index: 1;
   width: 100%;
+  min-height: 155px;
   margin-top: -60px;
   margin-left: 25px;
   padding: 30px 30px 20px 30px;
@@ -1171,6 +1172,7 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .article-block.article-block--works .article-block__details {
+    min-height: auto;
     margin-top: -25px;
     margin-left: 0;
     padding: 25px;
@@ -1218,10 +1220,6 @@ textarea {
 
 .article-block__image {
   height: 201px;
-  transition: opacity 0.4s ease-in-out;
-  transition: all 0.7s ease-in-out 0.5s;
-  transform: translateY(50px);
-  opacity: 0;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1234,9 +1232,6 @@ textarea {
 .article-block__details {
   position: relative;
   padding: 20px 0 20px 20px;
-  transition: all 0.7s ease-in-out 1s;
-  transform: translateY(50px);
-  opacity: 0;
 }
 
 .article-block__details:before {
@@ -1278,6 +1273,7 @@ textarea {
 .article-block__title {
   font-size: 16px;
   line-height: 1.7;
+  min-height: 54px;
   margin-top: 15px;
   letter-spacing: .06em;
   color: #151515;
@@ -1735,7 +1731,7 @@ textarea {
 .l-index__about-content {
   width: 884px;
   margin: 0 auto;
-  padding-top: 520px;
+  padding-top: 470px;
   transition: all 0.7s ease-in-out;
   transform: translateY(50px);
   opacity: 0;
@@ -2157,6 +2153,19 @@ textarea {
   .l-index__column-item {
     width: 100%;
   }
+}
+
+.l-index__column-item .article-block__image {
+  transition: opacity 0.4s ease-in-out;
+  transition: all 0.7s ease-in-out 0.5s;
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+.l-index__column-item .article-block__details {
+  transition: all 0.7s ease-in-out 1s;
+  transform: translateY(50px);
+  opacity: 0;
 }
 
 .l-index__column-button {

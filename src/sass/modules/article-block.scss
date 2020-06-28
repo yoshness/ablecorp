@@ -1,10 +1,4 @@
 .article-block {
-    &:hover {
-        .article-block__image {
-            opacity: .8;
-        }
-    }
-
     &.is-active {
         transform: translateY(0);
 
@@ -32,6 +26,7 @@
             z-index: 1;
 
             width: 100%;
+            min-height: 155px;
             margin-top: -60px;
             margin-left: 25px;
             padding: 30px 30px 20px 30px;
@@ -39,6 +34,7 @@
             background-color: #fff;
 
             @include max-screen($breakpoint-mobile) {
+                min-height: auto;
                 margin-top: -25px;
                 margin-left: 0;
                 padding: 25px;
@@ -83,11 +79,6 @@
 .article-block__image {
     height: 201px;
 
-    transition: opacity $duration $easing;
-    transition: all $duration-long $easing .5s;
-    transform: translateY(50px);
-
-    opacity: 0;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -100,11 +91,6 @@
     position: relative;
 
     padding: 20px 0 20px 20px;
-
-    transition: all $duration-long $easing 1s;
-    transform: translateY(50px);
-
-    opacity: 0;
 
     &:before {
         position: absolute;
@@ -152,6 +138,7 @@
     font-size: 16px;
     line-height: 1.7;
 
+    min-height: 54px;
     margin-top: 15px;
 
     letter-spacing: .06em;
