@@ -36,11 +36,13 @@ get_header();
 				<?php 
 					while ($articles->have_posts()): $articles->the_post(); 
 						$categories = get_the_terms( get_the_ID(), 'work_category' );
+
+						$featured_image = get_eyecatch_data(get_the_ID()) ? get_eyecatch_data(get_the_ID()) : IMAGE_URL.'ogp.jpg';
 				?>
 				<li class="l-columns__item">
 					<a href="<?php echo the_permalink(); ?>">
 						<article class="article-block">
-							<div class="article-block__image" style="background-image: url(<?php echo get_eyecatch_data( get_the_ID()); ?>);">
+							<div class="article-block__image" style="background-image: url(<?php echo $featured_image; ?>);">
 							</div>
 							<div class="article-block__details">
 								<time class="article-block__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>

@@ -1,73 +1,115 @@
 .l-columns {
-	padding-top: 110px;
-	margin-bottom: -220px;
+    margin-bottom: -220px;
+    padding-top: 120px;
 
-	// STATE
+    @include max-screen($breakpoint-mobile) {
+        padding-top: 90px;
+    }
+
+    // STATE
     &.is-hidden {
         opacity: 0;
     }
 }
 
 .l-columns__top {
-	.breadcrumbs {
-		margin-bottom: 50px;
-	}
+    .breadcrumbs {
+        margin-bottom: 50px;
+
+        @include max-screen($breakpoint-mobile) {
+            margin-bottom: 30px;
+        }
+    }
 }
 
 .l-columns__content {
+    position: relative;
+
+    overflow: hidden;
+
     margin-top: -150px;
     padding-top: 250px;
-    position: relative;
-    overflow: hidden;
     padding-bottom: 400px;
+
+    @include max-screen($breakpoint-mobile) {
+        padding-top: 200px;
+        padding-bottom: 250px;
+    }
 
     &:before {
         font-family: $font-avenir;
-	    font-size: 300px;
-	    font-weight: 700;
-	    position: absolute;
-	    top: 0;
-	    right: 80px;
-	    content: 'column';
-	    letter-spacing: .03em;
-	    color: #f9f9fd;
-	    text-shadow: 3px 0 #f9f9fd;
+        font-size: 300px;
+        font-weight: 700;
+
+        position: absolute;
+        top: 0;
+        right: 80px;
+
+        content: 'column';
+        letter-spacing: .03em;
+
+        color: #f9f9fd;
+        text-shadow: 3px 0 #f9f9fd;
+
+        @include max-screen($breakpoint-mobile) {
+            display: none;
+        }
     }
 
     &.l-columns__content--works {
-    	&:before {
-    		content: 'works';
-    	}
+        &:before {
+            content: 'works';
+        }
     }
 }
 
 .l-columns__list {
-	list-style-type: none;
+    list-style-type: none;
+
+    @include max-screen($breakpoint-mobile) {
+        display: block;
+    }
 }
 
 .l-columns__item {
-	width: 31.5%;
-	margin-bottom: 40px;
+    width: 31.5%;
+    margin-bottom: 40px;
+
+    @include max-screen($breakpoint-mobile) {
+        width: 100%;
+        margin-bottom: 30px;
+    }
 }
 
 .l-columns__decor {
-	img {
-		position: absolute;
+    img {
+        position: absolute;
 
-		&:first-child {
-			top: 20px;
-		    left: -150px;
-    		width: 420px;
+        &:first-child {
+            top: 20px;
+            left: -150px;
 
-            animation: squish 6s ease-in-out infinite alternate;
-		}
-		&:last-child {
-	        bottom: 0;
-		    right: -100px;
-		    width: 580px;
+            width: 420px;
 
             animation: squish 6s ease-in-out infinite alternate;
-		}
-	}
-	
+
+            @include max-screen($breakpoint-mobile) {
+                left: -80px;
+
+                width: 280px;
+            }
+        }
+        &:last-child {
+            right: -100px;
+            bottom: 0;
+
+            width: 580px;
+
+            animation: squish 6s ease-in-out infinite alternate;
+
+            @include max-screen($breakpoint-mobile) {
+                display: none;
+            }
+        }
+    }
 }
