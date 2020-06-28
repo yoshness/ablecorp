@@ -64,6 +64,7 @@ get_header();
 						<article class="service-block u-flex js-scroll-activate">
 							<div class="service-block__left">
 								<div class="service-block__image" style="background-image: url(<?php echo IMAGE_URL;?>index/service-1.jpg);"></div>
+								<div class="service-block__hover" style="background-image: url(<?php echo IMAGE_URL;?>index/service-1.jpg);"></div>
 							</div>
 							<div class="service-block__details">
 								<div class="service-block__details-top">
@@ -78,6 +79,7 @@ get_header();
 						<article class="service-block u-flex js-scroll-activate">
 							<div class="service-block__left">
 								<div class="service-block__image" style="background-image: url(<?php echo IMAGE_URL;?>index/service-2.jpg);"></div>
+								<div class="service-block__hover" style="background-image: url(<?php echo IMAGE_URL;?>index/service-2.jpg);"></div>
 							</div>
 							<div class="service-block__details">
 								<div class="service-block__details-top">
@@ -92,6 +94,7 @@ get_header();
 						<article class="service-block u-flex js-scroll-activate">
 							<div class="service-block__left">
 								<div class="service-block__image" style="background-image: url(<?php echo IMAGE_URL;?>index/service-4.jpg);"></div>
+								<div class="service-block__hover" style="background-image: url(<?php echo IMAGE_URL;?>index/service-4.jpg);"></div>
 							</div>
 							<div class="service-block__details">
 								<div class="service-block__details-top">
@@ -106,6 +109,7 @@ get_header();
 						<article class="service-block u-flex js-scroll-activate">
 							<div class="service-block__left">
 								<div class="service-block__image" style="background-image: url(<?php echo IMAGE_URL;?>index/service-3.jpg);"></div>
+								<div class="service-block__hover" style="background-image: url(<?php echo IMAGE_URL;?>index/service-3.jpg);"></div>
 							</div>
 							<div class="service-block__details">
 								<div class="service-block__details-top">
@@ -140,11 +144,16 @@ get_header();
 				<?php 
 					while ($works->have_posts()): $works->the_post(); 
 						$categories = get_the_terms( get_the_ID(), 'work_category' );
+
+						$featured_image = get_eyecatch_data(get_the_ID()) ? get_eyecatch_data(get_the_ID()) : IMAGE_URL.'ogp.jpg';
 				?>
 				<li class="l-index__works-item">
 					<a href="<?php echo the_permalink(); ?>">
 						<article class="article-block article-block--works">
-							<div class="article-block__image" style="background-image: url(<?php echo get_eyecatch_data( get_the_ID()); ?>);"></div>
+							<div class="article-block__image" style="background-image: url(<?php echo $featured_image; ?>);">
+								<div class="article-block__hover" style="background-image: url(<?php echo $featured_image; ?>);">
+								</div>
+							</div>
 							<div class="article-block__details">
 								<time class="article-block__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
 								<span class="article-block__category"><?php echo $categories[0]->name; ?></span>
@@ -191,7 +200,10 @@ get_header();
 					<li class="l-index__column-item">
 						<a href="<?php echo the_permalink(); ?>">
 							<article class="article-block js-scroll-activate">
-								<div class="article-block__image" style="background-image: url(<?php echo $featured_image; ?>);"></div>
+								<div class="article-block__image" style="background-image: url(<?php echo $featured_image; ?>);">
+									<div class="article-block__hover" style="background-image: url(<?php echo $featured_image; ?>);">
+								</div>
+								</div>
 								<div class="article-block__details">
 									<time class="article-block__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
 									<span class="article-block__category"><?php echo $categories[0]->name; ?></span>

@@ -1,4 +1,19 @@
 .article-block {
+    &:hover {
+        .article-block__hover {
+            transform: translateX(0) scale(1);
+
+            opacity: .6;
+        }
+        .article-block__category {
+            color: #fff;
+            background-color: $color-primary;
+        }
+        .article-block__title {
+            color: $color-primary;
+        }
+    }
+
     &.is-active {
         transform: translateY(0);
 
@@ -14,7 +29,8 @@
 
     // MODIFIER
     &.article-block--works {
-        .article-block__image {
+        .article-block__image,
+        .article-block__hover {
             height: 309px;
 
             @include max-screen($breakpoint-mobile) {
@@ -45,8 +61,11 @@
             }
         }
         .article-block__date {
-            font-size: 14px;
-            font-weight: normal;
+            font-family: $font-avenir-oblique;
+            font-size: 16px;
+
+            transform: skewX(-7deg);
+            letter-spacing: .03em;
 
             @include max-screen($breakpoint-mobile) {
                 font-size: 12px;
@@ -77,7 +96,13 @@
     }
 }
 .article-block__image {
+    position: relative;
+
+    overflow: hidden;
+
     height: 201px;
+
+    transition: opacity $duration-long $easing;
 
     background-repeat: no-repeat;
     background-position: center center;
@@ -87,6 +112,39 @@
         width: 100%;
     }
 }
+.article-block__hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 201px;
+
+    transition: all $duration $easing;
+    transform: translateX(-30px) scale(1.4);
+
+    opacity: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    &:after {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        content: '';
+
+        background-color: #bc175d;
+
+        mix-blend-mode: color;
+    }
+}
+
 .article-block__details {
     position: relative;
 
@@ -118,18 +176,15 @@
     }
 }
 .article-block__date {
-    font-size: 11px;
-    font-weight: bold;
+    font-family: $font-avenir-oblique;
+    font-size: 12px;
 
     display: inline-block;
 
     transform: skewX(-7deg);
+    letter-spacing: .03em;
 
     color: $color-primary;
-
-    @include max-screen($breakpoint-mobile) {
-        font-size: 12px;
-    }
 }
 .article-block__category {
     font-size: 12px;
@@ -138,6 +193,7 @@
     margin-left: 10px;
     padding: 5px 10px;
 
+    transition: all $duration $easing;
     letter-spacing: .1em;
 
     color: $color-primary;
@@ -151,8 +207,8 @@
     min-height: 54px;
     margin-top: 15px;
 
+    transition: color $duration $easing;
     letter-spacing: .06em;
 
     color: $base-font-color;
-    text-shadow: 1px 0;
 }

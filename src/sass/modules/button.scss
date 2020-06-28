@@ -5,9 +5,20 @@
 
     padding: 13px 80px 13px 40px;
 
+    transition: all .25s $easing;
+
     color: $color-primary;
     border: 1px solid $color-primary;
     border-radius: 25px;
+
+    &:hover {
+        color: #fff;
+        background-color: $color-primary;
+
+        &:after {
+            right: 30px;
+        }
+    }
 
     &:before {
         position: absolute;
@@ -36,6 +47,7 @@
         height: 1px;
 
         content: '';
+        transition: right .25s ease-in-out;
         transform: translateY(-50%);
 
         background-color: $color-primary;

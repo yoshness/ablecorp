@@ -27,6 +27,10 @@
 }
 
 .service-block__left {
+    position: relative;
+
+    overflow: hidden;
+
     width: 38%;
 
     @include max-screen($breakpoint-mobile) {
@@ -38,7 +42,7 @@
     width: 100%;
     height: 204px;
 
-    transition: all $duration-long $easing;
+    transition: opacity $duration-long $easing;
     transform: translateY(50px);
 
     opacity: 0;
@@ -48,6 +52,43 @@
 
     @include max-screen($breakpoint-mobile) {
         height: 189px;
+    }
+}
+
+.service-block__hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 204px;
+
+    transition: all $duration $easing;
+    transform: translateX(-30px) scale(1.4);
+
+    opacity: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @include max-screen($breakpoint-mobile) {
+        height: 189px;
+    }
+
+    &:after {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        content: '';
+
+        background-color: #bc175d;
+
+        mix-blend-mode: color;
     }
 }
 
@@ -82,12 +123,14 @@
         text-shadow: 1px 0;
     }
     em {
+        font-family: $font-avenir-oblique;
+        font-size: 16px;
         font-weight: 700;
-        font-style: normal;
 
         display: block;
 
         transform: skewX(-7deg);
+        letter-spacing: .03em;
     }
 }
 

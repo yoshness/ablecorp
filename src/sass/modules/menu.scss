@@ -126,6 +126,9 @@
         &:after {
             opacity: 1;
         }
+        &:after {
+            right: -80px;
+        }
     }
 
     &:before {
@@ -156,7 +159,7 @@
         height: 1px;
 
         content: '';
-        transition: opacity $duration $easing;
+        transition: right .25s ease-in-out;
         transform: translateY(-50%);
 
         opacity: 0;

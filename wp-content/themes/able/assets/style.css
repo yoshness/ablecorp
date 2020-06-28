@@ -4,6 +4,16 @@
   src: url("/wp-content/themes/able/assets/fonts/Avenir-Book.eot?#iefix") format("embedded-opentype"), url("/wp-content/themes/able/assets/fonts/Avenir-Book.woff2") format("woff2"), url("/wp-content/themes/able/assets/fonts/Avenir-Book.woff") format("woff"), url("/wp-content/themes/able/assets/fonts/Avenir-Book.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: 'Avenir-Heavy';
+  src: url("/wp-content/themes/able/assets/fonts/Avenir-Heavy.eot?#iefix") format("embedded-opentype"), url("/wp-content/themes/able/assets/fonts/Avenir-Heavy.woff2") format("woff2"), url("/wp-content/themes/able/assets/fonts/Avenir-Heavy.woff") format("woff"), url("/wp-content/themes/able/assets/fonts/Avenir-Heavy.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Avenir-Oblique';
+  src: url("/wp-content/themes/able/assets/fonts/Avenir-Oblique.eot?#iefix") format("embedded-opentype"), url("/wp-content/themes/able/assets/fonts/Avenir-Oblique.woff2") format("woff2"), url("/wp-content/themes/able/assets/fonts/Avenir-Oblique.woff") format("woff"), url("/wp-content/themes/able/assets/fonts/Avenir-Oblique.ttf") format("truetype");
+}
+
 body {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -685,6 +695,10 @@ textarea {
   opacity: 1;
 }
 
+.menu__item-link:hover:after {
+  right: -80px;
+}
+
 .menu__item-link:before {
   position: absolute;
   top: 50%;
@@ -707,7 +721,7 @@ textarea {
   width: 25px;
   height: 1px;
   content: '';
-  transition: opacity 0.4s ease-in-out;
+  transition: right .25s ease-in-out;
   transform: translateY(-50%);
   opacity: 0;
   background-color: #fff;
@@ -856,7 +870,7 @@ textarea {
 }
 
 .hero__cta {
-  font-family: "Avenir-Book";
+  font-family: "Avenir-Heavy";
   font-size: 14px;
   font-weight: 700;
   line-height: 7.25;
@@ -873,7 +887,6 @@ textarea {
   color: #3b19a7;
   border: 1px solid #3b19a7;
   border-radius: 100%;
-  text-shadow: 0 0 #3b19a7;
 }
 
 .hero__cta:hover {
@@ -1009,21 +1022,16 @@ textarea {
   color: #fff;
 }
 
-.section-title.section-title--white .section-title__en {
-  text-shadow: 1px 0 #fff;
-}
-
 .section-title.section-title--centered {
   text-align: center;
 }
 
 .section-title__en {
-  font-family: "Avenir-Book";
+  font-family: "Avenir-Heavy";
   font-size: 80px;
   font-weight: 700;
   line-height: 1.2;
   display: block;
-  text-shadow: 1px 0 #151515;
 }
 
 @media screen and (max-width: 767px) {
@@ -1065,6 +1073,8 @@ textarea {
 }
 
 .service-block__left {
+  position: relative;
+  overflow: hidden;
   width: 38%;
 }
 
@@ -1077,7 +1087,7 @@ textarea {
 .service-block__image {
   width: 100%;
   height: 204px;
-  transition: all 0.7s ease-in-out;
+  transition: opacity 0.7s ease-in-out;
   transform: translateY(50px);
   opacity: 0;
   background-repeat: no-repeat;
@@ -1089,6 +1099,38 @@ textarea {
   .service-block__image {
     height: 189px;
   }
+}
+
+.service-block__hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 204px;
+  transition: all 0.4s ease-in-out;
+  transform: translateX(-30px) scale(1.4);
+  opacity: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 767px) {
+  .service-block__hover {
+    height: 189px;
+  }
+}
+
+.service-block__hover:after {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-color: #bc175d;
+  mix-blend-mode: color;
 }
 
 .service-block__details {
@@ -1124,10 +1166,12 @@ textarea {
 }
 
 .service-block__details-top em {
+  font-family: "Avenir-Oblique";
+  font-size: 16px;
   font-weight: 700;
-  font-style: normal;
   display: block;
   transform: skewX(-7deg);
+  letter-spacing: .03em;
 }
 
 .service-block__details-description {
@@ -1136,6 +1180,20 @@ textarea {
   transition: all 0.7s ease-in-out 1s;
   transform: translateY(50px);
   opacity: 0;
+}
+
+.article-block:hover .article-block__hover {
+  transform: translateX(0) scale(1);
+  opacity: .6;
+}
+
+.article-block:hover .article-block__category {
+  color: #fff;
+  background-color: #3b19a7;
+}
+
+.article-block:hover .article-block__title {
+  color: #3b19a7;
 }
 
 .article-block.is-active {
@@ -1149,12 +1207,14 @@ textarea {
   opacity: 1;
 }
 
-.article-block.article-block--works .article-block__image {
+.article-block.article-block--works .article-block__image,
+.article-block.article-block--works .article-block__hover {
   height: 309px;
 }
 
 @media screen and (max-width: 767px) {
-  .article-block.article-block--works .article-block__image {
+  .article-block.article-block--works .article-block__image,
+  .article-block.article-block--works .article-block__hover {
     height: 185px;
   }
 }
@@ -1184,8 +1244,10 @@ textarea {
 }
 
 .article-block.article-block--works .article-block__date {
-  font-size: 14px;
-  font-weight: normal;
+  font-family: "Avenir-Oblique";
+  font-size: 16px;
+  transform: skewX(-7deg);
+  letter-spacing: .03em;
 }
 
 @media screen and (max-width: 767px) {
@@ -1219,7 +1281,10 @@ textarea {
 }
 
 .article-block__image {
+  position: relative;
+  overflow: hidden;
   height: 201px;
+  transition: opacity 0.7s ease-in-out;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1227,6 +1292,32 @@ textarea {
 
 .article-block__image img {
   width: 100%;
+}
+
+.article-block__hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 201px;
+  transition: all 0.4s ease-in-out;
+  transform: translateX(-30px) scale(1.4);
+  opacity: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.article-block__hover:after {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-color: #bc175d;
+  mix-blend-mode: color;
 }
 
 .article-block__details {
@@ -1259,17 +1350,12 @@ textarea {
 }
 
 .article-block__date {
-  font-size: 11px;
-  font-weight: bold;
+  font-family: "Avenir-Oblique";
+  font-size: 12px;
   display: inline-block;
   transform: skewX(-7deg);
+  letter-spacing: .03em;
   color: #3b19a7;
-}
-
-@media screen and (max-width: 767px) {
-  .article-block__date {
-    font-size: 12px;
-  }
 }
 
 .article-block__category {
@@ -1277,6 +1363,7 @@ textarea {
   font-weight: bold;
   margin-left: 10px;
   padding: 5px 10px;
+  transition: all 0.4s ease-in-out;
   letter-spacing: .1em;
   color: #3b19a7;
   border: 1px solid #3b19a7;
@@ -1288,9 +1375,9 @@ textarea {
   line-height: 1.7;
   min-height: 54px;
   margin-top: 15px;
+  transition: color 0.4s ease-in-out;
   letter-spacing: .06em;
   color: #151515;
-  text-shadow: 1px 0;
 }
 
 .article-single p {
@@ -1472,9 +1559,19 @@ textarea {
   position: relative;
   display: inline-block;
   padding: 13px 80px 13px 40px;
+  transition: all 0.25s ease-in-out;
   color: #3b19a7;
   border: 1px solid #3b19a7;
   border-radius: 25px;
+}
+
+.button:hover {
+  color: #fff;
+  background-color: #3b19a7;
+}
+
+.button:hover:after {
+  right: 30px;
 }
 
 .button:before {
@@ -1498,6 +1595,7 @@ textarea {
   width: 15px;
   height: 1px;
   content: '';
+  transition: right .25s ease-in-out;
   transform: translateY(-50%);
   background-color: #3b19a7;
 }
@@ -1835,17 +1933,16 @@ textarea {
 }
 
 .l-index__services:before {
-  font-family: "Avenir-Book";
+  font-family: "Avenir-Heavy";
   font-size: 330px;
   font-weight: 700;
   position: absolute;
-  bottom: 380px;
-  left: -550px;
+  bottom: 400px;
+  left: -530px;
   content: 'services';
   transform: rotate(90deg);
-  letter-spacing: .05em;
+  letter-spacing: .03em;
   color: #f9f9fd;
-  text-shadow: 3px 0 #f9f9fd;
 }
 
 @media screen and (max-width: 767px) {
@@ -1913,16 +2010,16 @@ textarea {
 }
 
 .l-index__services-item:after {
-  font-family: "Avenir-Book";
+  font-family: "Avenir-Heavy";
   font-size: 130px;
   font-weight: 700;
   position: absolute;
-  top: 0;
-  right: 50px;
+  top: -20px;
+  right: 20px;
   content: "0 " counter(service);
   counter-increment: service;
   transition: all 0.4s ease-in-out;
-  letter-spacing: -.1em;
+  letter-spacing: -.13em;
   color: #fff;
   text-shadow: -3px 0 #f5f5fc, 0 3px #f5f5fc, 3px 0 #f5f5fc, 0 -3px #f5f5fc;
 }
@@ -1938,6 +2035,11 @@ textarea {
 .l-index__services-item:hover .service-block__details-top h3 {
   color: #3b19a7;
   text-shadow: 1px 0 #3b19a7;
+}
+
+.l-index__services-item:hover .service-block__hover {
+  transform: translateX(0) scale(1);
+  opacity: .6;
 }
 
 .l-index__services-item:hover:after {
@@ -1967,17 +2069,16 @@ textarea {
 }
 
 .l-index__works:before {
-  font-family: "Avenir-Book";
-  font-size: 330px;
+  font-family: "Avenir-Heavy";
+  font-size: 350px;
   font-weight: 700;
   position: absolute;
-  top: 0;
+  top: -60px;
   left: 0;
   content: 'works';
-  letter-spacing: .05em;
+  letter-spacing: .03em;
   opacity: .05;
   color: #fff;
-  text-shadow: 3px 0 #fff;
 }
 
 @media screen and (max-width: 767px) {
@@ -2141,7 +2242,7 @@ textarea {
   position: absolute;
   right: 180px;
   bottom: -120px;
-  transition: all 0.7s ease-in-out 1.5s;
+  transition: transform 0.7s ease-in-out 1.5s, opacity 0.7s ease-in-out 1.5s, background-color 0.25s ease-in-out, color 0.25s ease-in-out;
   transform: translateY(50px);
   opacity: 0;
 }
@@ -2245,7 +2346,7 @@ textarea {
   z-index: 1;
   right: 30px;
   bottom: -100px;
-  transition: all 0.7s ease-in-out 1.5s;
+  transition: transform 0.7s ease-in-out 1.5s, opacity 0.7s ease-in-out 1.5s, background-color 0.25s ease-in-out, color 0.25s ease-in-out;
   transform: translateY(50px);
   opacity: 0;
 }
@@ -2383,7 +2484,7 @@ textarea {
 }
 
 .l-columns__content:before {
-  font-family: "Avenir-Book";
+  font-family: "Avenir-Heavy";
   font-size: 300px;
   font-weight: 700;
   position: absolute;
@@ -2392,7 +2493,6 @@ textarea {
   content: 'column';
   letter-spacing: .03em;
   color: #f9f9fd;
-  text-shadow: 3px 0 #f9f9fd;
 }
 
 @media screen and (max-width: 767px) {

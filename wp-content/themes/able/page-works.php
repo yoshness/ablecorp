@@ -43,6 +43,8 @@ get_header();
 					<a href="<?php echo the_permalink(); ?>">
 						<article class="article-block">
 							<div class="article-block__image" style="background-image: url(<?php echo $featured_image; ?>);">
+								<div class="article-block__hover" style="background-image: url(<?php echo $featured_image; ?>);">
+							</div>
 							</div>
 							<div class="article-block__details">
 								<time class="article-block__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>

@@ -2,10 +2,6 @@
     // MODIFIERS
     &.section-title--white {
         color: #fff;
-
-        .section-title__en {
-            text-shadow: 1px 0 #fff;
-        }
     }
     &.section-title--centered {
         text-align: center;
@@ -13,14 +9,12 @@
 }
 
 .section-title__en {
-    font-family: $font-avenir;
+    font-family: $font-avenir-heavy;
     font-size: 80px;
     font-weight: 700;
     line-height: 1.2;
 
     display: block;
-
-    text-shadow: 1px 0 $base-font-color;
 
     @include max-screen($breakpoint-mobile) {
         font-size: 50px;

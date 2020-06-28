@@ -29,6 +29,8 @@ $path-image: "#{$path-assets}/images";
 $path-font: "#{$path-assets}/fonts";
 
 $font-avenir: 'Avenir-Book';
+$font-avenir-heavy: 'Avenir-Heavy';
+$font-avenir-oblique: 'Avenir-Oblique';
 
 @font-face {
     font-family: 'Avenir-Book';
@@ -36,4 +38,18 @@ $font-avenir: 'Avenir-Book';
     url('#{$path-font}/Avenir-Book.woff2') format('woff2'),  /* Super Modern Browsers */
     url('#{$path-font}/Avenir-Book.woff') format('woff'), /* Pretty Modern Browsers */
     url('#{$path-font}/Avenir-Book.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'Avenir-Heavy';
+    src: url('#{$path-font}/Avenir-Heavy.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('#{$path-font}/Avenir-Heavy.woff2') format('woff2'),  /* Super Modern Browsers */
+    url('#{$path-font}/Avenir-Heavy.woff') format('woff'), /* Pretty Modern Browsers */
+    url('#{$path-font}/Avenir-Heavy.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'Avenir-Oblique';
+    src: url('#{$path-font}/Avenir-Oblique.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('#{$path-font}/Avenir-Oblique.woff2') format('woff2'),  /* Super Modern Browsers */
+    url('#{$path-font}/Avenir-Oblique.woff') format('woff'), /* Pretty Modern Browsers */
+    url('#{$path-font}/Avenir-Oblique.ttf')  format('truetype'), /* Safari, Android, iOS */
 }

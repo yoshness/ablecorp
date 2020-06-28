@@ -69,20 +69,19 @@
     }
 
     &:before {
-        font-family: $font-avenir;
+        font-family: $font-avenir-heavy;
         font-size: 330px;
         font-weight: 700;
 
         position: absolute;
-        bottom: 380px;
-        left: -550px;
+        bottom: 400px;
+        left: -530px;
 
         content: 'services';
         transform: rotate(90deg);
-        letter-spacing: .05em;
+        letter-spacing: .03em;
 
         color: #f9f9fd;
-        text-shadow: 3px 0 #f9f9fd;
 
         @include max-screen($breakpoint-mobile) {
             font-size: 150px;
@@ -151,18 +150,18 @@
     cursor: pointer;
 
     &:after {
-        font-family: $font-avenir;
+        font-family: $font-avenir-heavy;
         font-size: 130px;
         font-weight: 700;
 
         position: absolute;
-        top: 0;
-        right: 50px;
+        top: -20px;
+        right: 20px;
 
         content: '0 ' counter(service);
         counter-increment: service;
         transition: all $duration $easing;
-        letter-spacing: -.1em;
+        letter-spacing: -.13em;
 
         color: #fff;
         text-shadow: -3px 0 #f5f5fc, 0 3px #f5f5fc, 3px 0 #f5f5fc, 0 -3px #f5f5fc;
@@ -179,6 +178,11 @@
         .service-block__details-top h3 {
             color: $color-primary;
             text-shadow: 1px 0 $color-primary;;
+        }
+        .service-block__hover {
+            transform: translateX(0) scale(1);
+
+            opacity: .6;
         }
 
         &:after {
@@ -211,20 +215,19 @@
     }
 
     &:before {
-        font-family: $font-avenir;
-        font-size: 330px;
+        font-family: $font-avenir-heavy;
+        font-size: 350px;
         font-weight: 700;
 
         position: absolute;
-        top: 0;
+        top: -60px;
         left: 0;
 
         content: 'works';
-        letter-spacing: .05em;
+        letter-spacing: .03em;
 
         opacity: .05;
         color: #fff;
-        text-shadow: 3px 0 #fff;
 
         @include max-screen($breakpoint-mobile) {
             display: none;
@@ -390,7 +393,10 @@
     right: 180px;
     bottom: -120px;
 
-    transition: all $duration-long $easing 1.5s;
+    transition: transform $duration-long $easing 1.5s,
+    opacity $duration-long $easing 1.5s,
+    background-color .25s $easing,
+    color .25s $easing;
     transform: translateY(50px);
 
     opacity: 0;
@@ -498,7 +504,10 @@
     right: 30px;
     bottom: -100px;
 
-    transition: all $duration-long $easing 1.5s;
+    transition: transform $duration-long $easing 1.5s,
+    opacity $duration-long $easing 1.5s,
+    background-color .25s $easing,
+    color .25s $easing;
     transform: translateY(50px);
 
     opacity: 0;
