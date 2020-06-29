@@ -5,6 +5,7 @@ export default function heroAnimation() {
 	      $heroPeople = $('#js-hero-people'),
 	      $heroTagline = $('#js-hero-tagline'),
 	      $heroCTA = $('#js-hero-cta'),
+	      $heroScroll = $('#js-hero-scroll'),
 	      $header = $('#js-header');
 
 	$(window).on('load', () => {
@@ -14,6 +15,7 @@ export default function heroAnimation() {
 	                $heroPeople.addClass(IS_SHOWN).delay(700).queue((next) => {
 	                	$heroTagline.addClass(IS_SHOWN).delay(700).queue((next) => {
 		                	$heroCTA.addClass(IS_SHOWN);
+		                	$heroScroll.addClass(IS_SHOWN);
 		                });
 	                });
 	            });

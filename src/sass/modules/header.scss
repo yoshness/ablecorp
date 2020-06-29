@@ -1,14 +1,16 @@
 .header {
     position: absolute;
     z-index: 2;
-    top: 45px;
-    left: 50px;
+
+    width: 100%;
+    padding-top: 45px;
+    padding-left: 50px;
 
     transition: opacity $duration $easing;
 
     @include max-screen($breakpoint-mobile) {
-        top: 25px;
-        left: 20px;
+        padding-top: 25px;
+        padding-left: 20px;
     }
 
     // MODIFIER
@@ -23,7 +25,8 @@
     &.is-open {
         z-index: 20;
 
-        .header__left {
+        .header__left,
+        .header__contact {
             display: none;
         }
     }
@@ -35,6 +38,40 @@
 
         @include max-screen($breakpoint-mobile) {
             width: 165px;
+        }
+    }
+}
+
+.header__contact {
+    position: absolute;
+    top: 43px;
+    right: 110px;
+
+    display: block;
+
+    width: 50px;
+    height: 50px;
+
+    text-align: center;
+
+    color: $color-primary;
+    border: 1px solid $color-primary;
+    border-radius: 100%;
+
+    @include max-screen($breakpoint-mobile) {
+        top: 25px;
+        right: 65px;
+
+        width: 40px;
+        height: 40px;
+    }
+
+    i {
+        font-size: 21px;
+        line-height: 2.3;
+
+        @include max-screen($breakpoint-mobile) {
+            font-size: 16px;
         }
     }
 }
@@ -126,8 +163,6 @@
 
     // STATE
     &.is-open {
-        right: 77px;
-
         @include max-screen($breakpoint-mobile) {
             right: 30px;
         }

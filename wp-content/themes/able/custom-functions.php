@@ -79,7 +79,7 @@ $column_args = array(
     'has_archive' => true,
     'show_ui' => true,
     'hierarchical' => true,
-    'supports' => array( 'title', 'editor', 'thumbnail',),
+    'supports' => array( 'title', 'editor', 'thumbnail'),
     'rewrite' => array('slug' => 'column'),
     'menu_position' => 8,
 );
@@ -130,7 +130,7 @@ $work_args = array(
     'has_archive' => true,
     'show_ui' => true,
     'hierarchical' => true,
-    'supports' => array( 'title', 'editor', 'thumbnail',),
+    'supports' => array( 'title', 'editor', 'thumbnail'),
     'rewrite' => array('slug' => 'work'),
     'menu_position' => 8,
 );

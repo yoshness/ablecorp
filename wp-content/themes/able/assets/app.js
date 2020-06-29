@@ -10989,6 +10989,7 @@ function heroAnimation() {
 	    $heroPeople = $('#js-hero-people'),
 	    $heroTagline = $('#js-hero-tagline'),
 	    $heroCTA = $('#js-hero-cta'),
+	    $heroScroll = $('#js-hero-scroll'),
 	    $header = $('#js-header');
 
 	$(window).on('load', function () {
@@ -10998,6 +10999,7 @@ function heroAnimation() {
 					$heroPeople.addClass(IS_SHOWN).delay(700).queue(function (next) {
 						$heroTagline.addClass(IS_SHOWN).delay(700).queue(function (next) {
 							$heroCTA.addClass(IS_SHOWN);
+							$heroScroll.addClass(IS_SHOWN);
 						});
 					});
 				});
@@ -11088,9 +11090,15 @@ function scrollToElement() {
                 $('#js-toggle-menu').click();
             }
 
-            var $target = $($(e.currentTarget).attr('href').replace('/', ''));
+            var $target = $($(e.currentTarget).attr('href').replace('/', '')),
+                offset = 0;
+
+            if ($(e.currentTarget).data('offset') != undefined) {
+                offset = $(e.currentTarget).data('offset');
+            }
+
             if ($target != '') {
-                $('html, body').stop().animate({ scrollTop: $target.offset().top }, 1000);
+                $('html, body').stop().animate({ scrollTop: $target.offset().top + offset }, 1000);
             }
         }
     });

@@ -25,7 +25,7 @@ get_header();
 			<img src="<?php echo IMAGE_URL;?>index/synergy.svg" alt="">
 		</h1>
 		<p class="hero__tagline" id="js-hero-tagline">When do you start web marketing?</p>
-		<a class="hero__cta" href="#"  id="js-hero-cta">NOW</a>
+		<a class="hero__cta" href="mailto:info@a-ble.co.jp" id="js-hero-cta">NOW</a>
 		<div class="hero__decor">
 			<img class="hero__glob-left" src="<?php echo IMAGE_URL;?>index/hero-glob-left.svg" alt="">
 			<img class="hero__glob-right" src="<?php echo IMAGE_URL;?>index/hero-glob-right.svg" alt="">
@@ -35,8 +35,10 @@ get_header();
 				<img class="hero__person" src="<?php echo IMAGE_URL;?>index/person-red-2.svg" alt="">
 				<img class="hero__person" src="<?php echo IMAGE_URL;?>index/person-blue-2.svg" alt="">
 			</div>
-			
 		</div>
+		<a class="hero__scroll js-scroll" href="/#js-about-section" data-offset="-150" id="js-hero-scroll">
+			<span class="hero__scroll-line"></span>
+		</a>
 	</div>
 	<section class="l-index__about">
 		<div class="l-container">
@@ -45,7 +47,8 @@ get_header();
 					<span class="section-title__en">about us</span>
 					<span class="section-title__ja">私たちについて</span>
 				</h2>
-				<p>「最高なパフォーマンスとはなにか？」<br>様々な課題が生まれて、解決する。新たなニーズが生まれ、アイディアが生まれ満たされる。<br class="u-show-pc">時間が立つと共に様々なサービスが誕生し、多くの先人企業が社会貢献をしてきました。<br class="u-show-pc">このような現代において個人のみならず社会においてもニーズの多様化は常に加速しています。<br class="u-show-pc">多様化する需要に、Webマーケティングを通して様々なアイディアと実績を見せながら応えていきたい。<br class="u-show-pc">「curiosity（好奇心）」×「synagy（相乗効果）」をテーマに、<br class="u-show-pc">大胆かつ柔軟に。適正なチームとコストで。新時代に求められる新しいスタイルを作っていくことが私達のミッションです。</p>
+				<p>
+					<span>「最高なパフォーマンスとはなにか？」</span><br class="u-show-pc"><br>様々な課題が生まれて、解決する。新たなニーズが生まれ、アイディアが生まれ満たされる。<br class="u-show-pc">時間が立つと共に様々なサービスが誕生し、多くの先人企業が社会貢献をしてきました。<br class="u-show-pc">このような現代において個人のみならず社会においてもニーズの多様化は常に加速しています。<br class="u-show-pc">多様化する需要に、Webマーケティングを通して様々なアイディアと実績を見せながら応えていきたい。<br><br>「curiosity（好奇心）」×「synagy（相乗効果）」をテーマに、<br class="u-show-pc">大胆かつ柔軟に。適正なチームとコストで。新時代に求められる新しいスタイルを作っていくことが私達のミッションです。</p>
 			</div>
 		</div>
 	</section>
@@ -68,7 +71,7 @@ get_header();
 							</div>
 							<div class="service-block__details">
 								<div class="service-block__details-top">
-									<h3>Web制作</h3>
+									<h3><span>Web</span>制作</h3>
 									<em>Web Production</em>
 								</div>
 								<p class="service-block__details-description">とにかくハイコストパフォーマンスであること。それが私たちの強みです。<br class="u-show-pc">お客様に本当に必要で、かつ後悔しないWebサイト制作をコンテンツ企画からデザイン、納品までご一緒します。</p>
@@ -83,7 +86,7 @@ get_header();
 							</div>
 							<div class="service-block__details">
 								<div class="service-block__details-top">
-									<h3>SEO対策</h3>
+									<h3><span>SEO</span>対策</h3>
 									<em>Search Engine Optimization</em>
 								</div>
 								<p class="service-block__details-description">ユーザー視点での高品質なコンテンツを以って、SEO対策を実施すること。それが私たちの強みです。<br class="u-show-pc">検索エンジンから評価されやすいWebサイト、高い文章力とSEOの知識を併せもったライターが貴社SEO課題を解決します。</p>

@@ -10,16 +10,16 @@
 			<img src="<?php echo IMAGE_URL;?>logo.svg" alt="">
 			<ul class="footer__nav u-flex">
 				<li class="footer__nav-item">
-					<a href="#">私たちについて</a>
+					<a class="js-scroll" href="/#js-about-section" data-offset="-150">私たちについて</a>
 				</li>
 				<li class="footer__nav-item">
-					<a href="#">事業内容</a>
+					<a class="js-scroll" href="/#js-services-section" data-offset="-100">事業内容</a>
 				</li>
 				<li class="footer__nav-item">
-					<a href="#">実績</a>
+					<a class="js-scroll" href="/#js-works-section">実績</a>
 				</li>
 				<li class="footer__nav-item">
-					<a href="#">コラム</a>
+					<a class="js-scroll" href="/#js-column-section" data-offset="-50">コラム</a>
 				</li>
 				<li class="footer__nav-item">
 					<a href="#">プライバシーポリシー</a>
@@ -28,7 +28,17 @@
 					<a href="#">お問い合わせ</a>
 				</li>
 			</ul>
-			<small>© 2020 able co.,ltd</small>
+			<div class="footer__details u-flex">
+				<small>© 2020 able co.,ltd</small>
+				<div class="footer__sns">
+					<a href="#">
+						<i class="icon icon-facebook"></i>
+					</a>
+					<a href="https://twitter.com/ltd_able" target="_blank">
+						<i class="icon icon-twitter"></i>
+					</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </footer>

@@ -57,15 +57,16 @@
 
         display: block;
 
-        margin-top: 50px;
-
         text-align: center;
         letter-spacing: .15em;
 
         color: #fff;
 
         @include max-screen($breakpoint-mobile) {
+            width: 100%;
             margin-top: 25px;
+
+            order: 2;
         }
     }
 }
@@ -84,6 +85,12 @@
 
     letter-spacing: .1em;
 
+    &:hover {
+        &:after {
+            transform: translate(5px, -50%);
+        }
+    }
+
     a {
         color: #fff;
     }
@@ -99,10 +106,55 @@
         height: 0;
 
         content: '';
+        transition: transform $duration $easing;
         transform: translateY(-50%);
 
         border-width: 4px 0 4px 8px;
         border-style: solid;
         border-color: transparent transparent transparent #fff;
+    }
+}
+.footer__details {
+    margin-top: 50px;
+
+    @include max-screen($breakpoint-mobile) {
+        margin-top: 30px;
+    }
+}
+.footer__sns {
+    @include max-screen($breakpoint-mobile) {
+        width: 100%;
+        margin-bottom: 15px;
+
+        text-align: center;
+
+        order: 1;
+    }
+    a {
+        line-height: 2.8;
+
+        display: inline-block;
+
+        width: 35px;
+        height: 35px;
+
+        text-align: center;
+
+        border: 1px solid #fff;
+        border-radius: 50%;
+
+        i {
+            font-size: 16px;
+
+            color: #fff;
+        }
+
+        &:first-child {
+            margin-right: 5px;
+
+            @include max-screen($breakpoint-mobile) {
+                margin-right: 10px;
+            }
+        }
     }
 }

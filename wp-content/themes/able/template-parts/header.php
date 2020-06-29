@@ -5,6 +5,9 @@
 		</a>
 	</div>
 	<div class="header__right">
+		<a class="header__contact" href="mailto:info@a-ble.co.jp">
+			<i class="icon icon-envelope"></i>
+		</a>		
 		<div class="header__hamburger" id="js-toggle-menu">
 			<span></span>
 			<span></span>

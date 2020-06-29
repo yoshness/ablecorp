@@ -28,16 +28,29 @@
 
         margin-top: 40px;
 
+        text-align: center;
         letter-spacing: .07em;
 
         color: #fff;
+
+        @include max-screen($breakpoint-mobile) {
+            text-align: left;
+        }
+
+        span {
+            @include max-screen($breakpoint-mobile) {
+                display: block;
+
+                text-align: center;
+            }
+        }
     }
 }
 
 .l-index__about-content {
     width: 884px;
     margin: 0 auto;
-    padding-top: 470px;
+    padding-top: 450px;
 
     transition: all $duration-long $easing;
     transform: translateY(50px);
@@ -46,7 +59,7 @@
 
     @include max-screen($breakpoint-mobile) {
         width: 100%;
-        padding-top: 275px;
+        padding-top: 185px;
     }
 
     &.is-active {

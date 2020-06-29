@@ -38,8 +38,6 @@
     }
 }
 
-
-
 .l-article__content-top {
     margin-top: 130px;
 
@@ -53,17 +51,23 @@
 
         color: $color-primary;
     }
-    span {
+    a {
         font-weight: bold;
 
         margin-left: 15px;
         padding: 5px 13px;
 
+        transition: all $duration $easing;
         letter-spacing: .1em;
 
         color: $color-primary;
         border: 1px solid $color-primary;
         border-radius: 25px;
+
+        &:hover {
+            color: #fff;
+            background-color: $color-primary;
+        }
     }
     h1 {
         font-size: 42px;
@@ -107,17 +111,25 @@
     a {
         font-weight: bold;
 
+        position: relative;
+        z-index: 1;
+
         display: inline-block;
 
         margin-left: 15px;
         padding: 5px 13px;
 
+        transition: all $duration $easing;
         letter-spacing: .1em;
 
         color: $color-primary;
         border: 1px solid $color-primary;
         border-radius: 25px;
 
+        &:hover {
+            color: #fff;
+            background-color: $color-primary;
+        }
 
         &:first-of-type {
             margin-left: 0;

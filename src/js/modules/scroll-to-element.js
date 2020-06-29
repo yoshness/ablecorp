@@ -11,9 +11,15 @@ export default function scrollToElement() {
                 $('#js-toggle-menu').click();
             }
 
-            let $target = $($(e.currentTarget).attr('href').replace('/', ''));
+            let $target = $($(e.currentTarget).attr('href').replace('/', '')),
+                offset = 0;
+
+            if($(e.currentTarget).data('offset') != undefined) {
+                offset = $(e.currentTarget).data('offset');
+            }
+
             if($target != '') {
-                $('html, body').stop().animate({ scrollTop: $target.offset().top }, 1000);
+                $('html, body').stop().animate({ scrollTop: $target.offset().top + offset }, 1000);
             }
         }
     });

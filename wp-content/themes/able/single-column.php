@@ -27,9 +27,13 @@ get_header();
 					<div class="l-article__content-main">
 						<div class="l-article__content-top">
 								<time datetime="<?php echo get_the_date( 'Y-m-d' ); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
-								<span><?php echo $post_category[0]->name; ?></span>
+								<a href="<?php echo HOME_URL;?>column-category/<?php echo $post_category[0]->slug; ?>">
+									<?php echo $post_category[0]->name; ?>
+								</a>
 								<h1><?php echo the_title(); ?></h1>
+								<?php if($featured_img_url): ?>
 								<img src="<?php echo esc_url($featured_img_url) ?>">
+								<?php endif; ?>
 							</div>
 							<div class="article-single">
 								<?php the_content(); ?>
@@ -47,7 +51,7 @@ get_header();
 									) );
 
 									foreach ( $categories as $cat) { ?>
-										<a href="#">
+										<a href="<?php echo HOME_URL;?>column-category/<?php echo $cat->slug; ?>">
 											<?php echo $cat->name; ?>
 										</a>
 								<?php } ?>
