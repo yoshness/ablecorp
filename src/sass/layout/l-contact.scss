@@ -289,6 +289,37 @@
 
             color: $color-primary;
         }
+
+        a:not(.button) {
+            // padding-bottom: 2px;
+            border-bottom: 1px solid $color-primary;
+
+            &:before {
+                position: absolute;
+                top: 4px;
+                left: -20px;
+
+                width: 12px;
+                height: 10px;
+
+                content: '';
+
+                border: 1px solid $color-primary;
+            }
+            &:after {
+                position: absolute;
+                top: 8px;
+                left: -15px;
+
+                width: 12px;
+                height: 10px;
+
+                content: '';
+
+                border: 1px solid $color-primary;
+                background-color: #fff;
+            }
+        }
     }
 }
 

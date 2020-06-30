@@ -22,7 +22,7 @@
 					<a class="js-scroll" href="/#js-column-section" data-offset="-50">コラム</a>
 				</li>
 				<li class="footer__nav-item">
-					<a href="#">プライバシーポリシー</a>
+					<a href="<?php echo HOME_URL; ?>/privacy">プライバシーポリシー</a>
 				</li>
 				<li class="footer__nav-item">
 					<a href="#">お問い合わせ</a>

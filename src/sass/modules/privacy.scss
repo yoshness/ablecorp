@@ -1,0 +1,159 @@
+.privacy {
+    h2 {
+        font-size: 26px;
+
+        display: inline-block;
+
+        margin: 35px auto;
+        padding: 5px 15px;
+
+        background-color: #e8e9f8;
+        text-shadow: 1px 0;
+
+        @include max-screen($breakpoint-mobile) {
+            font-size: 22px;
+
+            margin-bottom: 40px;
+            padding: 0;
+
+            background: none;
+        }
+
+        span {
+            display: inline-block;
+
+            &.u-show-pc {
+                display: inline-block;
+
+                @include max-screen($breakpoint-mobile) {
+                    display: none;
+                }
+            }
+            &.u-show-sp {
+                display: none;
+
+                @include max-screen($breakpoint-mobile) {
+                    display: inline-block;
+
+                    margin-bottom: 5px;
+                    padding: 8px 10px;
+
+                    background-color: #e8e9f8;
+                }
+            }
+        }
+    }
+    h3 {
+        font-size: 24px;
+
+        display: inline-block;
+
+        margin: 35px auto;
+        padding-bottom: 4px;
+
+        border-bottom: 2px solid $color-primary;
+        text-shadow: 1px 0;
+
+        @include max-screen($breakpoint-mobile) {
+            font-size: 19px;
+
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+    }
+    h4 {
+        font-size: 20px;
+
+        position: relative;
+
+        margin: 35px auto;
+        padding-left: 25px;
+
+        text-shadow: 1px 0;
+
+        @include max-screen($breakpoint-mobile) {
+            font-size: 15px;
+
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        &:before {
+            position: absolute;
+            top: -2px;
+            left: 0;
+
+            width: 2px;
+            height: 105%;
+
+            content: '';
+
+            background-color: $color-primary;
+        }
+    }
+    p {
+        font-size: 16px;
+        line-height: 2;
+
+        margin-bottom: 50px;
+
+        @include max-screen($breakpoint-mobile) {
+            font-size: 14px;
+
+            margin-bottom: 20px;
+        }
+
+        &.no-margin {
+            margin-bottom: 0;
+        }
+    }
+    ol {
+        list-style-position: inside;
+        li {
+            font-size: 16px;
+            line-height: 2;
+
+            @include max-screen($breakpoint-mobile) {
+                font-size: 14px;
+            }
+
+            ol {
+                padding-left: 30px;
+
+                list-style-type: lower-alpha;
+
+                @include max-screen($breakpoint-mobile) {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+    blockquote {
+        font-size: 16px;
+
+        margin: 45px auto 15px;
+        padding: 40px;
+
+        border: 1px solid #e8e9f8;
+
+        @include max-screen($breakpoint-mobile) {
+            font-size: 14px;
+
+            margin-top: 30px;
+            padding: 25px 20px;
+        }
+
+        p {
+            margin-top: 15px;
+            margin-bottom: 0;
+
+            @include max-screen($breakpoint-mobile) {
+                margin-top: 8px;
+            }
+        }
+    }
+    .version {
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
+}
