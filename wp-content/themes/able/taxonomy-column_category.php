@@ -15,6 +15,7 @@ get_header(); ?>
   	<div class="l-columns__top">
 		<div class="l-container">
 			<?php 
+				$slug = 'columns';
 				include( locate_template( 'template-parts/breadcrumbs.php', false, false ) );
 			?>
 			<h1 class="section-title">

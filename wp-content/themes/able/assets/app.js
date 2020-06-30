@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 12);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10953,14 +10953,16 @@ return jQuery;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_init_sliders__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_hero_animation__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modules_toggle_menu__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modules_scroll_to_element__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modules_scroll_activate__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_init_sliders__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_hero_animation__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modules_toggle_menu__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modules_scroll_to_element__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modules_scroll_activate__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__modules_contact_form_actions__ = __webpack_require__(4);
 
 window.jQuery = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
 window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
+
 
 
 
@@ -10973,11 +10975,104 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__modules_hero_animation__["a" 
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__modules_toggle_menu__["a" /* default */])();
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__modules_scroll_to_element__["a" /* default */])();
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__modules_scroll_activate__["a" /* default */])();
+__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__modules_contact_form_actions__["a" /* default */])();
 
 /***/ }),
 /* 2 */,
 /* 3 */,
 /* 4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = contactFormActions;
+function contactFormActions() {
+	var $form = $('#js-contact-form'),
+	    $viewStep1 = $('#js-contact-form-step1'),
+	    $viewStep2 = $('#js-contact-form-step2'),
+	    $bottomStep1 = $('#js-contact-bottom-step1'),
+	    $bottomStep2 = $('#js-contact-bottom-step2'),
+	    $triggerStep1 = $('#js-contact-trigger-form'),
+	    $triggerStep2 = $('#js-contact-trigger-confirm'),
+	    $countStep2 = $('#js-contact-count-step2'),
+	    offset = $(window).width() > 768 ? 400 : 500;
+
+	$triggerStep2.click(function (e) {
+		e.preventDefault();
+
+		validateFields();
+
+		if (flag == false) {
+			$viewStep1.hide();
+			$viewStep2.show();
+			$bottomStep1.hide();
+			$bottomStep2.show();
+			$countStep2.addClass('is-active');
+
+			$.each($('p[data-source]'), function (index, el) {
+				var source = $(el).data('source');
+
+				$(el).text($('.js-contact-input[name=\'your-' + source + '\']').val());
+			});
+
+			$('html, body').stop().animate({ scrollTop: $viewStep2.offset().top }, 1000);
+		}
+	});
+
+	$triggerStep1.click(function (e) {
+		e.preventDefault();
+
+		$viewStep1.show();
+		$viewStep2.hide();
+		$bottomStep1.show();
+		$bottomStep2.hide();
+		$countStep2.removeClass('is-active');
+	});
+
+	var flag = false;
+	function validateFields() {
+		$.each($('.js-contact-input-required'), function (index, value) {
+			var $el = $(value);
+
+			if (!$el.val()) {
+				$el.parent().css('border-color', 'red');
+				$('html, body').stop().animate({ scrollTop: $el.offset().top - offset }, 1000);
+
+				flag = true;
+				return;
+			} else {
+				if ($el.hasClass('js-contact-email')) {
+					if (!isEmail($el.val())) {
+						$el.parent().css('border-color', 'red');
+						$('html, body').stop().animate({ scrollTop: $el.offset().top - offset }, 1000);
+
+						flag = true;
+						return;
+					} else {
+						$el.parent().css('border-color', '#bcbcbc');
+						flag = false;
+					}
+				} else {
+					$el.parent().css('border-color', '#bcbcbc');
+					flag = false;
+				}
+			}
+		});
+	}
+
+	function isEmail(email) {
+		var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		return regex.test(email);
+	}
+
+	$('.js-contact-input').keypress(function (event) {
+		if (event.keyCode == 13) {
+			event.preventDefault();
+		}
+	});
+}
+
+/***/ }),
+/* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11009,11 +11104,11 @@ function heroAnimation() {
 }
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_slick_carousel__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_slick_carousel__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_slick_carousel___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_slick_carousel__);
 /* harmony export (immutable) */ __webpack_exports__["a"] = initSliders;
 
@@ -11037,7 +11132,7 @@ function initSliders() {
 }
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11072,7 +11167,7 @@ function scrollActivate() {
 }
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11105,7 +11200,7 @@ function scrollToElement() {
 }
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11129,7 +11224,7 @@ function toggleMenu() {
 }
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -14149,8 +14244,8 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 10 */,
-/* 11 */
+/* 11 */,
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(1);

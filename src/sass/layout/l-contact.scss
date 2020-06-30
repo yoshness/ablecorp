@@ -1,0 +1,375 @@
+.l-contact {
+    margin-bottom: -220px;
+    padding-top: 120px;
+
+    @include max-screen($breakpoint-mobile) {
+        padding-top: 90px;
+    }
+
+    // STATE
+    &.is-hidden {
+        opacity: 0;
+    }
+}
+
+.l-contact__top {
+    .breadcrumbs {
+        margin-bottom: 50px;
+
+        @include max-screen($breakpoint-mobile) {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.l-contact__content {
+    position: relative;
+
+    overflow: hidden;
+
+    margin-top: -150px;
+    padding-top: 250px;
+    padding-bottom: 300px;
+
+    @include max-screen($breakpoint-mobile) {
+        padding-top: 200px;
+        padding-bottom: 320px;
+    }
+
+    &:before {
+        font-family: $font-avenir-heavy;
+        font-size: 300px;
+        font-weight: 700;
+
+        position: absolute;
+        top: 0;
+        right: 80px;
+
+        content: 'contact';
+        letter-spacing: .03em;
+
+        color: #f9f9fd;
+
+        @include max-screen($breakpoint-mobile) {
+            display: none;
+        }
+    }
+}
+
+.l-contact__content-main {
+    width: 896px;
+    margin: 0 auto;
+
+    @include max-screen($breakpoint-mobile) {
+        width: 100%;
+    }
+
+    .wpcf7-mail-sent-ok {
+        display: none !important;
+    }
+}
+
+.l-contact__content-heading {
+    font-size: 30px;
+
+    margin-bottom: 75px;
+
+    text-align: center;
+
+    @include max-screen($breakpoint-mobile) {
+        font-size: 25px;
+
+        margin-bottom: 30px;
+    }
+}
+
+.l-contact__content-description {
+    font-size: 16px;
+    line-height: 2.1;
+
+    text-align: center;
+
+    @include max-screen($breakpoint-mobile) {
+        font-size: 14px;
+    }
+}
+
+.l-contact__content-button {
+    display: block;
+
+    width: 213px;
+    margin: 80px auto 0;
+
+    @include max-screen($breakpoint-mobile) {
+        margin-top: 40px;
+    }
+}
+
+.l-contact__steps {
+    margin-top: 90px;
+
+    counter-reset: steps;
+
+    @include max-screen($breakpoint-mobile) {
+        margin-top: 30px;
+    }
+}
+
+.l-contact__step {
+    font-size: 16px;
+
+    position: relative;
+
+    width: 248px;
+    padding: 12px 0 14px;
+
+    counter-increment: steps;
+    text-align: center;
+
+    opacity: .6;
+    border-radius: 50px;
+    background-color: #f5f5fc;
+
+    @include max-screen($breakpoint-mobile) {
+        font-size: 14px;
+        font-weight: 500;
+
+        width: auto;
+
+        color: $color-primary;
+        background: none;
+    }
+
+    &:before {
+        position: absolute;
+        top: 50%;
+        right: -30px;
+
+        display: none;
+
+        width: 12px;
+        height: 1px;
+
+        content: '';
+        transform: translateY(-50%);
+
+        background-color: $color-primary;
+
+        @include max-screen($breakpoint-mobile) {
+            display: block;
+        }
+    }
+    &:after {
+        position: absolute;
+        top: 50%;
+        right: -30px;
+
+        display: none;
+
+        width: 5px;
+        height: 5px;
+
+        content: '';
+        transform: translateY(-50%) rotate(45deg);
+
+        border-top: 1px solid $color-primary;
+        border-right: 1px solid $color-primary;
+
+        @include max-screen($breakpoint-mobile) {
+            display: block;
+        }
+    }
+
+    &:last-of-type {
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+
+    &.is-active {
+        opacity: 1;
+    }
+
+    span {
+        &:before {
+            font-family: $font-avenir-heavy;
+            font-size: 30px;
+
+            position: relative;
+            top: 2px;
+            left: -5px;
+
+            content: '0'counter(steps);
+
+            color: $color-primary;
+            text-shadow: 1px 0;
+
+            @include max-screen($breakpoint-mobile) {
+                display: none;
+            }
+        }
+    }
+}
+
+.l-contact__form {
+    margin-top: 110px;
+
+    @include max-screen($breakpoint-mobile) {
+        margin-top: 20px;
+    }
+}
+
+.l-contact__confirm {
+    margin-top: 110px;
+    padding: 85px 80px;
+
+    background-color: #f5f5fc;
+
+    @include max-screen($breakpoint-mobile) {
+        margin-top: 40px;
+        padding: 35px 30px;
+    }
+
+    li {
+        margin-bottom: 40px;
+
+        @include max-screen($breakpoint-mobile) {
+            margin-bottom: 30px;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+
+            @include max-screen($breakpoint-mobile) {
+                margin-bottom: 0;
+            }
+        }
+
+        span {
+            font-weight: bold;
+
+            width: 23%;
+
+            @include max-screen($breakpoint-mobile) {
+                width: 100%;
+            }
+        }
+        p {
+            width: 77%;
+
+            @include max-screen($breakpoint-mobile) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.l-contact__bottom {
+    margin: 80px auto 0;
+
+    text-align: center;
+
+    @include max-screen($breakpoint-mobile) {
+        margin-top: 40px;
+    }
+
+    p {
+        font-size: 16px;
+
+        margin-bottom: 40px;
+
+        @include max-screen($breakpoint-mobile) {
+            font-size: 14px;
+        }
+
+        a {
+            position: relative;
+            z-index: 1;
+
+            color: $color-primary;
+        }
+    }
+}
+
+.l-contact__bottom-step2 {
+    width: 430px;
+    margin: 0 auto;
+
+    @include max-screen($breakpoint-mobile) {
+        width: 100%;
+    }
+
+    .button {
+        width: 185px;
+
+        @include max-screen($breakpoint-mobile) {
+            position: relative;
+            z-index: 1;
+
+            margin: 0 auto;
+
+            order: 2;
+        }
+
+        &:not(.button--basic) {
+            padding-top: 0;
+            padding-bottom: 0;
+
+            @include max-screen($breakpoint-mobile) {
+                margin-bottom: 20px;
+
+                order: 1;
+            }
+
+            input {
+                width: 185px;
+                height: 49px;
+                margin-left: -40px;
+                padding-left: 40px;
+
+                cursor: pointer;
+                text-align: left;
+            }
+            .ajax-loader {
+                display: none;
+            }
+        }
+    }
+}
+
+.l-contact__decor {
+    img {
+        position: absolute;
+
+        &:first-child {
+            top: 20px;
+            left: -150px;
+
+            width: 420px;
+
+            animation: squish 6s ease-in-out infinite alternate;
+
+            @include max-screen($breakpoint-mobile) {
+                left: -80px;
+
+                width: 280px;
+            }
+        }
+        &:last-child {
+            right: -100px;
+            bottom: 0;
+
+            width: 580px;
+
+            animation: squish 6s ease-in-out infinite alternate;
+
+            @include max-screen($breakpoint-mobile) {
+                right: -80px;
+                bottom: 80px;
+
+                width: 350px;
+            }
+        }
+    }
+}

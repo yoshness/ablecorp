@@ -65,4 +65,20 @@
             background-color: #fff;
         }
     }
+    &.button--basic {
+        padding: 13px 40px;
+
+        color: #6b6b6b;
+        border-color: #6b6b6b;
+
+        &:hover {
+            color: #fff;
+            background-color: #6b6b6b;
+        }
+
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
 }

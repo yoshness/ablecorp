@@ -149,3 +149,18 @@ function get_excerpt($text, $charNumber) {
     }
     return $text;
 }
+
+/*
+Redirect after contact form is submitted
+*/
+function cf7_footer_script(){  
+    //if page name is contact.
+    if ( is_page('contact')) {?>
+        <script>
+        document.addEventListener( 'wpcf7mailsent', function( event ) {
+                location = 'https://a-ble.co.jp/thank-you';
+            }, false );
+        </script>
+    <?php } 
+}
+add_action('wp_footer', 'cf7_footer_script');

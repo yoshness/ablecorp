@@ -22,10 +22,7 @@
 		<title>able Co., Ltd.</title>
 
 		<meta property="og:title" content="able Co., Ltd.">
-		<meta name="description" content=""/>
 		<meta property="og:url" content="https://a-ble.co.jp/" />
-
-		<meta property="og:description" content=""/>
 		<meta property="og:site_name" content="able Co., Ltd." />
 		<meta property="og:image" content="<?php echo IMAGE_URL; ?>ogp.jpg">
 		<link rel="shortcut icon" type="image/png" href="<?php echo IMAGE_URL; ?>favicon.png"/>
