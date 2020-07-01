@@ -2124,7 +2124,7 @@ textarea {
 }
 
 .contact__item label {
-  width: 23%;
+  width: 25%;
   margin-top: 20px;
 }
 
@@ -2135,9 +2135,10 @@ textarea {
 }
 
 .contact__item label:before {
+  font-size: 14px;
   margin-right: 12px;
   padding: 3px 8px;
-  content: '必須';
+  content: '任意';
   color: #fff;
   background-color: #464646;
 }
@@ -2149,11 +2150,12 @@ textarea {
 }
 
 .contact__item label.required:before {
+  content: '必須';
   background-color: #e81212;
 }
 
 .contact__item .wpcf7-form-control-wrap {
-  width: 77%;
+  width: 75%;
   border: 1px solid #bcbcbc;
 }
 
@@ -2346,11 +2348,6 @@ textarea {
   .privacy blockquote p {
     margin-top: 8px;
   }
-}
-
-.privacy .version {
-  margin-top: 40px;
-  margin-bottom: 0;
 }
 
 .l-container {
@@ -3511,7 +3508,7 @@ textarea {
 
 .l-contact__confirm li span {
   font-weight: bold;
-  width: 23%;
+  width: 25%;
 }
 
 @media screen and (max-width: 767px) {
@@ -3521,7 +3518,7 @@ textarea {
 }
 
 .l-contact__confirm li p {
-  width: 77%;
+  width: 75%;
 }
 
 @media screen and (max-width: 767px) {
@@ -3760,5 +3757,81 @@ textarea {
     right: -80px;
     bottom: 80px;
     width: 350px;
+  }
+}
+
+.l-404 {
+  padding: 120px 0 50px;
+}
+
+@media screen and (max-width: 767px) {
+  .l-404 {
+    padding: 90px 0 100px;
+  }
+}
+
+.l-404 a.button {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.l-404__content {
+  position: relative;
+  width: 896px;
+  margin: 200px auto 80px;
+  padding: 75px 120px;
+  text-align: center;
+  background-color: #f5f5fc;
+}
+
+@media screen and (max-width: 767px) {
+  .l-404__content {
+    width: 100%;
+    margin: 180px auto 45px;
+    padding: 40px 35px;
+  }
+}
+
+.l-404__content:before {
+  font-family: "Avenir-Heavy";
+  font-size: 200px;
+  font-weight: 700;
+  position: absolute;
+  top: -215px;
+  left: 50%;
+  content: '404';
+  transform: translateX(-50%);
+  letter-spacing: .03em;
+  color: #f9f9fd;
+}
+
+@media screen and (max-width: 767px) {
+  .l-404__content:before {
+    font-size: 150px;
+    top: -164px;
+  }
+}
+
+.l-404__content h1 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .l-404__content h1 {
+    font-size: 20px;
+    line-height: 1.8;
+  }
+}
+
+.l-404__content p {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 767px) {
+  .l-404__content p {
+    font-size: 14px;
+    line-height: 1.8;
   }
 }

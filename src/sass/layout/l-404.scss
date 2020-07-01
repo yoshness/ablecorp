@@ -1,0 +1,73 @@
+.l-404 {
+    padding: 120px 0 50px;
+
+    @include max-screen($breakpoint-mobile) {
+        padding: 90px 0 100px;
+    }
+
+    a.button {
+        display: block;
+
+        width: 200px;
+        margin: 0 auto;
+    }
+}
+
+.l-404__content {
+    position: relative;
+
+    width: 896px;
+    margin: 200px auto 80px;
+    padding: 75px 120px;
+
+    text-align: center;
+
+    background-color: #f5f5fc;
+
+    @include max-screen($breakpoint-mobile) {
+        width: 100%;
+        margin: 180px auto 45px;
+        padding: 40px 35px;
+    }
+
+    &:before {
+        font-family: $font-avenir-heavy;
+        font-size: 200px;
+        font-weight: 700;
+
+        position: absolute;
+        top: -215px;
+        left: 50%;
+
+        content: '404';
+        transform: translateX(-50%);
+        letter-spacing: .03em;
+
+        color: #f9f9fd;
+
+        @include max-screen($breakpoint-mobile) {
+            font-size: 150px;
+
+            top: -164px;
+        }
+    }
+
+    h1 {
+        font-size: 30px;
+
+        margin-bottom: 30px;
+
+        @include max-screen($breakpoint-mobile) {
+            font-size: 20px;
+            line-height: 1.8;
+        }
+    }
+    p {
+        font-size: 16px;
+
+        @include max-screen($breakpoint-mobile) {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+    }
+}

@@ -10,27 +10,21 @@
 get_header();
 ?>
 
-<main id="site-content" role="main">
-
-	<div class="section-inner thin error404-content">
-
-		<h1 class="entry-title"><?php _e( 'Page Not Found', 'twentytwenty' ); ?></h1>
-
-		<div class="intro-text"><p><?php _e( 'The page you were looking for could not be found. It might have been removed, renamed, or did not exist in the first place.', 'twentytwenty' ); ?></p></div>
-
-		<?php
-		get_search_form(
-			array(
-				'label' => __( '404 not found', 'twentytwenty' ),
-			)
-		);
-		?>
-
-	</div><!-- .section-inner -->
-
-</main><!-- #site-content -->
-
-<?php get_template_part( 'template-parts/footer-menus-widgets' ); ?>
+<main class="l-404" id="js-main-wrapper">
+	<div class="l-container">
+		<div class="l-404__top">
+			<?php 
+				$slug = '404';
+				include( locate_template( 'template-parts/breadcrumbs.php', false, false ) );
+			?>
+		</div>
+		<div class="l-404__content">
+			<h1>申し訳ございませんが、<br>お探しのページは見つかりませんでした。</h1>
+			<p>お客さまのお探しのページは削除されたか、もしくは移動された可能性があります。</p>
+		</div>
+		<a class="button" href="<?php echo HOME_URL; ?>">TOPへ戻る</a>
+	</div>
+</main>
 
 <?php
 get_footer();

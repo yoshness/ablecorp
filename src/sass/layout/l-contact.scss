@@ -249,14 +249,14 @@
         span {
             font-weight: bold;
 
-            width: 23%;
+            width: 25%;
 
             @include max-screen($breakpoint-mobile) {
                 width: 100%;
             }
         }
         p {
-            width: 77%;
+            width: 75%;
 
             @include max-screen($breakpoint-mobile) {
                 width: 100%;

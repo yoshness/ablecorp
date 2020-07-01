@@ -4,7 +4,7 @@
 			<h2 class="section-title section-title--white section-title--centered">
 				<span class="section-title__en">contact us</span>
 			</h2>
-			<a class="footer__top-button button button--white" href="#">お問い合わせはこちらから</a>
+			<a class="footer__top-button button button--white" href="<?php echo HOME_URL; ?>contact">お問い合わせはこちらから</a>
 		</div>
 		<div class="footer__bottom">
 			<img src="<?php echo IMAGE_URL;?>logo.svg" alt="">
@@ -22,10 +22,10 @@
 					<a class="js-scroll" href="/#js-column-section" data-offset="-50">コラム</a>
 				</li>
 				<li class="footer__nav-item">
-					<a href="<?php echo HOME_URL; ?>/privacy">プライバシーポリシー</a>
+					<a href="<?php echo HOME_URL; ?>privacy">プライバシーポリシー</a>
 				</li>
 				<li class="footer__nav-item">
-					<a href="#">お問い合わせ</a>
+					<a href="<?php echo HOME_URL; ?>contact">お問い合わせ</a>
 				</li>
 			</ul>
 			<div class="footer__details u-flex">

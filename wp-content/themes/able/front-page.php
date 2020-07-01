@@ -25,7 +25,7 @@ get_header();
 			<img src="<?php echo IMAGE_URL;?>index/synergy.svg" alt="">
 		</h1>
 		<p class="hero__tagline" id="js-hero-tagline">When do you start web marketing?</p>
-		<a class="hero__cta" href="mailto:info@a-ble.co.jp" id="js-hero-cta">NOW</a>
+		<a class="hero__cta" href="<?php echo HOME_URL; ?>contact" id="js-hero-cta">NOW</a>
 		<div class="hero__decor">
 			<img class="hero__glob-left" src="<?php echo IMAGE_URL;?>index/hero-glob-left.svg" alt="">
 			<img class="hero__glob-right" src="<?php echo IMAGE_URL;?>index/hero-glob-right.svg" alt="">
