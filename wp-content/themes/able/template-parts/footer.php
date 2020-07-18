@@ -7,7 +7,9 @@
 			<a class="footer__top-button button button--white" href="<?php echo HOME_URL; ?>contact">お問い合わせはこちらから</a>
 		</div>
 		<div class="footer__bottom">
-			<img src="<?php echo IMAGE_URL;?>logo.svg" alt="">
+			<a class="js-scroll" href="/#js-main-wrapper" title="Go to Top">
+				<img src="<?php echo IMAGE_URL;?>logo.svg" alt="">
+			</a>
 			<ul class="footer__nav u-flex">
 				<li class="footer__nav-item">
 					<a class="js-scroll" href="/#js-about-section" data-offset="-150">私たちについて</a>

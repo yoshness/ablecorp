@@ -7,6 +7,10 @@
 
     opacity: 0;
 
+    @include min-screen($breakpoint-wide) {
+        padding-top: 250px;
+    }
+
     // STATE
     &.is-shown {
         opacity: 1;
@@ -153,6 +157,22 @@
 
     width: 100%;
     height: 550px;
+
+    @include min-screen($breakpoint-wide) {
+        bottom: -250px;
+    }
+    @include min-screen($breakpoint-ultra-wide) {
+        bottom: -350px;
+    }
+    @include min-screen(2050px) {
+        bottom: -380px;
+        left: 50%;
+
+        width: 80%;
+        margin: 0 auto;
+
+        transform: translateX(-50%);
+    }
 }
 
 .hero__glob-left {
@@ -165,6 +185,12 @@
 
     animation: squish 6s ease-in-out infinite alternate;
 
+    @include min-screen($breakpoint-wide) {
+        height: 670px;
+    }
+    @include min-screen($breakpoint-ultra-wide) {
+        left: 0;
+    }
     @include max-screen($breakpoint-mobile) {
         bottom: -250px;
         left: -100px;
@@ -183,6 +209,9 @@
 
     animation: squish-alt 4s ease-in-out infinite alternate;
 
+    @include min-screen($breakpoint-ultra-wide) {
+        right: 0;
+    }
     @include max-screen($breakpoint-mobile) {
         right: -100px;
         bottom: -250px;
@@ -292,6 +321,9 @@
     border: 1px solid #fff;
     border-radius: 35%;
 
+    @include min-screen($breakpoint-wide) {
+        bottom: -35%;
+    }
     @include max-screen($breakpoint-mobile) {
         right: 50%;
         bottom: -125px;

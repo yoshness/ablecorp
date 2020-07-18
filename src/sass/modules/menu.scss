@@ -56,6 +56,9 @@
 
     counter-reset: menu-items;
 
+    @include min-screen($breakpoint-wide) {
+        padding-top: 400px;
+    }
     @include max-screen($breakpoint-mobile) {
         padding: 120px 0;
     }

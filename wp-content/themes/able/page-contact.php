@@ -23,7 +23,7 @@ get_header();
 		<div class="l-container">
 			<div class="l-contact__content-main">
 				<p class="l-contact__content-description">
-					弊社にご関心をお持ちいただきまして、ありがとうございます。<br>ご意見・ご相談、料金のお見積もりなど、お気軽にお問合わせください。<br>お問合せ内容の確認後、担当者よりご連絡させていただきます。
+					弊社にご関心をお持ちいただきまして、<br class="u-show-sp">ありがとうございます。<br>ご意見・ご相談、料金のお見積もりなど、<br class="u-show-sp">お気軽にお問合わせください。<br>お問合せ内容の確認後、担当者よりご連絡させていただきます。
 				</p>
 				<div class="l-contact__steps u-flex">
 					<div class="l-contact__step is-active">

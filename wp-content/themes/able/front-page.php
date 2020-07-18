@@ -193,12 +193,13 @@ get_header();
 		        ?>
 				<ul class="l-index__column-list u-flex">
 					<?php 
-						while ($columns->have_posts()): $columns->the_post(); 
+						while ($columns->have_posts()): $columns->the_post();
+							$categories = get_the_terms( get_the_ID(), 'column_category' );
 
-						// Making an excerpt of the news post content
-					    $title_excerpt = get_excerpt(get_the_title(), 100);
+							// Making an excerpt of the news post content
+						    $title_excerpt = get_excerpt(get_the_title(), 100);
 
-					    $featured_image = get_eyecatch_data(get_the_ID()) ? get_eyecatch_data(get_the_ID()) : IMAGE_URL.'ogp.jpg';
+						    $featured_image = get_eyecatch_data(get_the_ID()) ? get_eyecatch_data(get_the_ID()) : IMAGE_URL.'ogp.jpg';
 					?>
 					<li class="l-index__column-item">
 						<a href="<?php echo the_permalink(); ?>">

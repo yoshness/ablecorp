@@ -16,6 +16,12 @@
     background-position: center center;
     background-size: cover;
 
+    @include min-screen($breakpoint-wide) {
+        height: 1350px;
+    }
+    @include min-screen($breakpoint-ultra-wide) {
+        height: 1700px;
+    }
     @include max-screen($breakpoint-mobile) {
         height: 880px;
         margin-top: 0;
@@ -57,6 +63,12 @@
 
     opacity: 0;
 
+    @include min-screen($breakpoint-wide) {
+        padding-top: 650px;
+    }
+    @include min-screen($breakpoint-ultra-wide) {
+        padding-top: 850px;
+    }
     @include max-screen($breakpoint-mobile) {
         width: 100%;
         padding-top: 185px;
@@ -111,6 +123,9 @@
     top: -70px;
     right: -230px;
 
+    @include min-screen($breakpoint-wide) {
+        top: 0;
+    }
     @include max-screen($breakpoint-mobile) {
         top: 70px;
         right: -100px;
@@ -219,6 +234,10 @@
     background-position: center center;
     background-size: cover;
 
+    @include min-screen($breakpoint-wide) {
+        height: 950px;
+        margin-bottom: 150px;
+    }
     @include max-screen($breakpoint-mobile) {
         height: 440px;
         margin-bottom: 350px;
