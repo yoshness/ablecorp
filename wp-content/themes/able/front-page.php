@@ -17,7 +17,7 @@
 get_header();
 ?>
 
-<main class="l-index" id="js-main-wrapper">
+<main class="l-index js-index-page" id="js-main-wrapper">
 	<div class="hero" id="js-hero">
 		<h1 class="hero__eyecatch" id="js-hero-eyecatch">
 			<img src="<?php echo IMAGE_URL;?>index/curiosity.svg" alt="">
@@ -64,9 +64,9 @@ get_header();
 				</h2>
 				<ul class="l-index__services-list">
 					<li class="l-index__services-item">
-						<article class="service-block u-flex js-scroll-activate">
+						<article class="service-block u-flex js-scroll-activate js-scroll-activate-split">
 							<div class="service-block__left">
-								<div class="service-block__image" style="background-image: url(<?php echo IMAGE_URL;?>index/service-1.jpg);"></div>
+								<div class="service-block__image js-split-image" style="background-image: url(<?php echo IMAGE_URL;?>index/service-1.jpg);"></div>
 								<div class="service-block__hover" style="background-image: url(<?php echo IMAGE_URL;?>index/service-1.jpg);"></div>
 							</div>
 							<div class="service-block__details">
@@ -79,9 +79,9 @@ get_header();
 						</article>
 					</li>
 					<li class="l-index__services-item">
-						<article class="service-block u-flex js-scroll-activate">
+						<article class="service-block u-flex js-scroll-activate js-scroll-activate-split">
 							<div class="service-block__left">
-								<div class="service-block__image" style="background-image: url(<?php echo IMAGE_URL;?>index/service-2.jpg);"></div>
+								<div class="service-block__image js-split-image" style="background-image: url(<?php echo IMAGE_URL;?>index/service-2.jpg);"></div>
 								<div class="service-block__hover" style="background-image: url(<?php echo IMAGE_URL;?>index/service-2.jpg);"></div>
 							</div>
 							<div class="service-block__details">
@@ -94,9 +94,9 @@ get_header();
 						</article>
 					</li>
 					<li class="l-index__services-item">
-						<article class="service-block u-flex js-scroll-activate">
+						<article class="service-block u-flex js-scroll-activate js-scroll-activate-split">
 							<div class="service-block__left">
-								<div class="service-block__image" style="background-image: url(<?php echo IMAGE_URL;?>index/service-4.jpg);"></div>
+								<div class="service-block__image js-split-image" style="background-image: url(<?php echo IMAGE_URL;?>index/service-4.jpg);"></div>
 								<div class="service-block__hover" style="background-image: url(<?php echo IMAGE_URL;?>index/service-4.jpg);"></div>
 							</div>
 							<div class="service-block__details">
@@ -109,9 +109,9 @@ get_header();
 						</article>
 					</li>
 					<li class="l-index__services-item">
-						<article class="service-block u-flex js-scroll-activate">
+						<article class="service-block u-flex js-scroll-activate js-scroll-activate-split">
 							<div class="service-block__left">
-								<div class="service-block__image" style="background-image: url(<?php echo IMAGE_URL;?>index/service-3.jpg);"></div>
+								<div class="service-block__image js-split-image" style="background-image: url(<?php echo IMAGE_URL;?>index/service-3.jpg);"></div>
 								<div class="service-block__hover" style="background-image: url(<?php echo IMAGE_URL;?>index/service-3.jpg);"></div>
 							</div>
 							<div class="service-block__details">
@@ -128,6 +128,9 @@ get_header();
 		</div>
 	</section>
 	<section class="l-index__works" id="js-works-section">
+		<div class="l-index__works-outline">
+			<span id="js-works-outline" data-direction="reverse">works</span>
+		</div>
 		<div class="l-index__works-content js-scroll-activate">
 			<h2 class="section-title section-title--white">
 				<span class="section-title__en">works</span>

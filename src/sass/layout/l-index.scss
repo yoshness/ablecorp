@@ -202,21 +202,23 @@
         }
     }
 
-    &:hover {
-        .service-block__details-top h3 {
-            color: $color-primary;
-            text-shadow: 1px 0 $color-primary;;
-        }
-        .service-block__hover {
-            transform: translateX(0) scale(1);
+    &.is-shown {
+        &:hover {
+            .service-block__details-top h3 {
+                color: $color-primary;
+                text-shadow: 1px 0 $color-primary;;
+            }
+            .service-block__hover {
+                transform: translateX(0) scale(1);
 
-            opacity: .6;
-        }
+                opacity: .6;
+            }
 
-        &:after {
-            transform: translateX(50px);
+            &:after {
+                transform: translateX(50px);
 
-            color: #f5f5fc;
+                color: #f5f5fc;
+            }
         }
     }
 }
@@ -245,26 +247,6 @@
 
         background-image: url(#{$path-image}/index/works-bg-sp.png);
     }
-
-    &:before {
-        font-family: $font-avenir-heavy;
-        font-size: 350px;
-        font-weight: 700;
-
-        position: absolute;
-        top: -60px;
-        left: 0;
-
-        content: 'works';
-        letter-spacing: .03em;
-
-        opacity: .05;
-        color: #fff;
-
-        @include max-screen($breakpoint-mobile) {
-            display: none;
-        }
-    }
     &:after {
         position: absolute;
         right: 0;
@@ -283,6 +265,36 @@
             width: 100%;
             height: 275px;
         }
+    }
+}
+
+.l-index__works-outline {
+    position: absolute;
+    top: 0;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    @include max-screen($breakpoint-mobile) {
+        display: none;
+    }
+
+    span {
+        font-family: $font-avenir-heavy;
+        font-size: 350px;
+        font-weight: 700;
+        line-height: .7;
+
+        position: absolute;
+        top: 80px;
+        right: -800px;
+
+        letter-spacing: .03em;
+
+        opacity: .05;
+        color: #fff;
     }
 }
 

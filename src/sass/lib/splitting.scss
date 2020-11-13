@@ -1,0 +1,51 @@
+.splitting.cells img {
+    display: block;
+
+    width: 100%;
+}
+
+.splitting.cells {
+    visibility: hidden;
+    /*overflow: hidden;*/
+
+    background-size: cover;
+}
+.splitting .cell-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: -ms-grid;
+    display:     grid;
+
+    width: 100%;
+    height: 100%;
+
+    background: inherit;
+
+    grid-template: repeat(var(--row-total), 1fr)/repeat(var(--col-total), 1fr);
+}
+.splitting .cell {
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    opacity: 1;
+    background: inherit;
+}
+
+.splitting .cell-inner {
+    position: absolute;
+    top: calc(-100% * var(--row-index));
+    /* Position properly */
+    left: calc(-100% * var(--col-index));
+
+    visibility: visible;
+    /* Size to fit the whole container size */
+
+    width: calc(100% * var(--col-total));
+    height: calc(100% * var(--row-total));
+
+    background: inherit;
+}
