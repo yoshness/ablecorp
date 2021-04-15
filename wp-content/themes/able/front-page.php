@@ -174,7 +174,7 @@ get_header();
 				<div class="l-index__works-arrow l-index__works-arrow--prev js-slider-prev"></div>
 				<div class="l-index__works-arrow l-index__works-arrow--next js-slider-next"></div>
 			</div>
-			<a class="l-index__works-button button" href="<?php echo HOME_URL; ?>works">実績一覧へ</a>
+			<a class="l-index__works-button button button--white" href="<?php echo HOME_URL; ?>works">実績一覧へ</a>
 		</div>
 	</section>
 	<section class="l-index__column js-scroll-activate" id="js-column-section">
